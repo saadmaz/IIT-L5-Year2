@@ -1,0 +1,38 @@
+          +-----------------------+
+          | <<abstract>>         |
+          |  GeometricObject     |
+          +---------------------+
+          | - colour: String    |
+          | - filled: boolean   |
+          +---------------------+
+          | +getColour()        |
+          | +setColour()        |
+          | +getFilled()        |
+          | +setFilled()        |
+          | +toString()         |
+          | +getArea()          |
+          | +getPerimeter()     |
+          | +getShape()         |
+          +---------------------+
+   /         |           \
+  /          |            \
+ +----+    +----+       +----+
+ |Circle|  |Rectangle|  |Square|
+ +----+    +----+       +----+
+ |radius|  |length|     |side|
+ |      |  |width |     |    |
+ +----+   +------+     +----+
+ |getArea()        |getArea()      |getArea()
+ |getPerimeter()   |getPerimeter() |getPerimeter()
+ |getShape()       |getShape()     |getShape()
+ +----+            +-----+         +----+
+
+<<interface>> ShapeCollection
+    |
+    V
+GeometricShapeCollection
+- shapeList: ArrayList<GeometricObject>
+- numObject: int
++ addShape()
++ printShapeList()
++ runMenu()
