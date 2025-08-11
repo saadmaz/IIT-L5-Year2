@@ -1,0 +1,20 @@
+-- SQL to create sample Product table and insert 3 sample rows
+CREATE DATABASE IF NOT EXISTS homteq_demo;
+USE homteq_demo;
+
+DROP TABLE IF EXISTS Product;
+CREATE TABLE Product (
+  prodId INT AUTO_INCREMENT PRIMARY KEY,
+  prodName VARCHAR(255) NOT NULL,
+  prodPicNameLarge VARCHAR(255) DEFAULT NULL,
+  prodDescripLong TEXT,
+  prodPrice DECIMAL(10,2) DEFAULT 0.00,
+  prodQuantity INT DEFAULT 0
+);
+
+INSERT INTO Product (prodName, prodPicNameLarge, prodDescripLong, prodPrice, prodQuantity) VALUES
+('Smart Thermostat', 'thermostat_large.jpg', 'Advanced thermostat with Wi-Fi and learning capabilities.', 129.99, 10),
+('Smart Light Bulb', 'bulb_large.jpg', 'Dimmable LED smart bulb with color control and scheduling.', 19.50, 25),
+('Smart Door Lock', 'lock_large.jpg', 'Secure smart lock with remote access and fingerprint option.', 199.00, 5);
+
+-- After importing, ensure you copy matching images into the images/ folder.
