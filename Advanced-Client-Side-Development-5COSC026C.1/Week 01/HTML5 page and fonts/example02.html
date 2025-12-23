@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML & CSS Example</title>
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300&display=swap">
+
+    <style>
+        /* Body Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #3498db; /* Solid background color */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-family: 'Lobster', cursive; /* Custom font from Google Fonts */
+            text-decoration: underline; /* Text underline */
+        }
+
+        /* Section Styles */
+        section {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('background.jpg');
+            background-size: cover;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        /* Article Styles */
+        .article-card {
+            background-color: white;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .article-card h2 {
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Text shadow */
+        }
+
+        /* Footer with Gradient Background */
+        footer {
+            background: linear-gradient(to right, #ff7e5f, #feb47b, #f06); /* Gradient background */
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Attribute Selectors */
+        a[href^="https"] {
+            color: green; /* All links starting with https */
+        }
+
+        img[alt] {
+            border: 2px solid red; /* Images with an alt attribute */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to the Website</h1>
+    </header>
+
+    <!-- Main Content Section -->
+    <section>
+        <!-- Article 1 -->
+        <div class="article-card">
+            <h2>First Article</h2>
+            <p>This is an article with a background shadow effect and rounded corners. The text here is styled using a custom font and shadows.</p>
+        </div>
+
+        <!-- Article 2 -->
+        <div class="article-card">
+            <h2>Second Article</h2>
+            <p>This article demonstrates the use of attribute selectors for styling images and links.</p>
+            <a href="https://example.com">Go to Example</a>
+            <img src="image.jpg" alt="Sample Image" width="100">
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 Your Website. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
