@@ -1,0 +1,743 @@
+{
+	"info": {
+		"_postman_id": "d3e2323c-cbb0-4e11-9c40-b6cc78bdeeed",
+		"name": "Bookstore API",
+		"description": "# RESTful Bookstore API 📚💻\n\nThe RESTful Bookstore API is a comprehensive back-end system designed for an online bookstore application. 🏪 This project implements a complete RESTful web service using JAX-RS (Java API for RESTful Web Services) that follows standard REST architectural principles to provide a robust interface for client applications.\n\n## Project Overview 🔍\n\nThe API serves as the foundation for a bookstore e-commerce platform, providing endpoints to manage books, authors, customers, shopping carts, and orders. ✨ It enables typical bookstore operations such as browsing books, managing inventory, customer registration, shopping cart functionality, and order processing.\n\nKey features of the API include:\n\n- **Resource-Based Architecture** 🏗️: The API is organized around resources (books, authors, customers, carts, orders) with intuitive URL structures.\n    \n- **Complete CRUD Operations** ♻️: All resources support Create, Read, Update, and Delete operations using appropriate HTTP methods.\n    \n- **Relationship Management** 🔗: Proper handling of relationships between entities (e.g., authors and their books, customers and their orders).\n    \n- **Data Validation** ✅: Comprehensive input validation to ensure data integrity.\n    \n- **Error Handling** ⚠️: Custom exceptions mapped to appropriate HTTP status codes with meaningful error messages.\n    \n- **In-Memory Data Storage** 💾: Simulated persistence using Java collections, focusing on the API design rather than database integration.\n    \n\n## Technical Implementation 🛠️\n\nThe project is built using the following technologies:\n\n- **Java** ☕: Core programming language\n    \n- **JAX-RS** 🌐: Java standard for implementing RESTful web services\n    \n- **Jersey** 🏈: JAX-RS reference implementation\n    \n- **Maven** 🏗️: For project management and dependency handling\n    \n- **JSON** 📄: Primary format for request and response bodies\n    \n\nThe code is structured according to best practices for RESTful API development:\n\n- **Model Classes** 📋: Represent domain entities with proper annotations for JSON binding\n    \n- **Repository Classes** 🗄️: Handle data access and storage operations\n    \n- **Resource Classes** 🌍: Define API endpoints and HTTP method handlers\n    \n- **Exception Classes** 🚫: Custom exceptions for various error scenarios\n    \n- **Exception Mappers** 🔄: Convert exceptions to appropriate HTTP responses\n    \n\n## API Endpoints 🚪\n\nThe API provides the following key endpoints:\n\n- **Book Management** 📖: `/books` - Create, retrieve, update, and delete books\n    \n- **Author Management** ✍️: `/authors` - Manage authors and retrieve their books\n    \n- **Customer Management** 👤: `/customers` - Register and manage customer accounts\n    \n- **Cart Operations** 🛒: `/customers/{id}/cart` - View and modify shopping carts\n    \n- **Order Processing** 📦: `/customers/{id}/orders` - Create and view orders\n    \n\n## Educational Purpose 🎓\n\nThis project was developed as part of the Client-Server Architectures coursework at the University of Westminster. 🏫 It demonstrates understanding of:\n\n- RESTful principles and their application in API design 🧩\n    \n- Resource modeling and URL structure design 🗂️\n    \n- HTTP method semantics 📡\n    \n- Status code usage 🚦\n    \n- Exception handling in RESTful services ⚠️\n    \n- JAX-RS framework implementation ⚙️\n    \n\nThe API balances academic requirements with real-world application design, providing a solid foundation that could be extended with database integration, authentication, and additional features in a production environment. 🚀",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33074307"
+	},
+	"item": [
+		{
+			"name": "Book Resource Endpoints",
+			"item": [
+				{
+					"name": "Create a Book",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"title\": \"Discount Book\", \r\n    \"authorId\": 1, \r\n    \"isbn\": \"978-0-1234-5678-9\", \r\n    \"publicationYear\": 2020, \r\n    \"price\": 5.99, \r\n    \"stock\": 30 \r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/books",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Books",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/books",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Book by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/books/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Book",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"id\": 6,\r\n    \"title\": \"The Great Gatsby (Updated)\",\r\n    \"authorId\": 2,\r\n    \"isbn\": \"978-3-16-148410-0\",\r\n    \"publicationYear\": 1925,\r\n    \"price\": 12.99,\r\n    \"stock\": 50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/books/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"books",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Book",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/books/999",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"books",
+								"999"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "This folder contains all the requests related to book management within the bookstore. It includes endpoints for creating, retrieving, updating, and deleting books. The endpoints follow RESTful principles, using proper HTTP methods for each operation. You'll find requests to:\n\n- Create new books (POST /books)\n    \n- Retrieve all books in the system (GET /books)\n    \n- Get a specific book by ID (GET /books/{id})\n    \n- Update existing books (PUT /books/{id})\n    \n- Delete books from the system (DELETE /books/{id})\n    \n\nThese endpoints manage the core product data of the bookstore, including details like titles, ISBNs, prices, and stock levels."
+		},
+		{
+			"name": "Author Resource Endpoints",
+			"item": [
+				{
+					"name": "Create an Author",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"name\": \"F. Scott Fitzgerald\", \r\n    \"biography\": \"American novelist known for The Great Gatsby\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/authors",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Authors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/authors",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Author by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/authors/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"authors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Author",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"name\": \"SAAD \", \r\n    \"biography\": \"Biography content\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/authors/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"authors",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Books by Author",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/authors/2/books",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"authors",
+								"2",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Author",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/authors/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"authors",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "This folder contains requests for managing author information in the bookstore system. Authors are creators of books, and these endpoints allow for their complete management. The requests in this folder include:\n\n- Adding new authors to the system (POST /authors)\n    \n- Listing all available authors (GET /authors)\n    \n- Getting detailed information about a specific author (GET /authors/{id})\n    \n- Updating author information (PUT /authors/{id})\n    \n- Deleting authors (DELETE /authors/{id})\n    \n- Getting all books by a specific author (GET /authors/{id}/books)\n    \n\nThese endpoints are essential for maintaining the bibliographic data in the bookstore system."
+		},
+		{
+			"name": "Customer Resource Endpoints",
+			"item": [
+				{
+					"name": "Create a Customer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"name\": \"Saad Mazhar\", \r\n    \"email\": \"saadmazaa@gmail.com\", \r\n    \"password\": \"123456\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/customers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/customers/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/customers/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customers",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"name\": \"John Doe\", \r\n    \"email\": \"invalid-email\", \r\n    \"password\": \"password123\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/customers/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/customers/4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "This folder contains requests for managing customer accounts in the bookstore. Customer management is vital for e-commerce operations, and these endpoints provide the necessary functionality. Included are requests for:\n\n- Registering new customers (POST /customers)\n    \n- Retrieving all customers (GET /customers)\n    \n- Getting information about a specific customer (GET /customers/{id})\n    \n- Updating customer information (PUT /customers/{id})\n    \n- Deleting customer accounts (DELETE /customers/{id})\n    \n\nThese endpoints handle user accounts and maintain customer data like names, email addresses, and passwords."
+		},
+		{
+			"name": "Cart Resource Endpoints",
+			"item": [
+				{
+					"name": "Add Item to Cart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"bookId\": 3, \r\n    \"quantity\": 5\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/customers/1/cart/items",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"1",
+								"cart",
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Cart",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/customers/1/cart",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"1",
+								"cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Cart Item",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"quantity\": 20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/customers/1/cart/items/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"1",
+								"cart",
+								"items",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Item from Cart",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/customers/3/cart/items/999",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"3",
+								"cart",
+								"items",
+								"999"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "This folder contains requests for managing customer shopping carts. Shopping carts are temporary storage for items customers intend to purchase. The requests include:\n\n- Viewing a customer's cart (GET /customers/{customerId}/cart)\n    \n- Adding items to the cart (POST /customers/{customerId}/cart/items)\n    \n- Updating quantities of items in the cart (PUT /customers/{customerId}/cart/items/{bookId})\n    \n- Removing items from the cart (DELETE /customers/{customerId}/cart/items/{bookId})\n    \n\nThese endpoints enable the shopping experience, allowing customers to collect books before placing an order."
+		},
+		{
+			"name": "Order Resource Endpoints",
+			"item": [
+				{
+					"name": "Create an Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/customers/1/orders",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"1",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Orders for a Customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/customers/999/orders/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"999",
+								"orders",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Specific Order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/customers/1/orders/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"1",
+								"orders",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "This folder contains requests for order management. Orders represent completed purchases by customers. The requests in this folder include:\n\n- Creating orders from a customer's cart (POST /customers/{customerId}/orders)\n    \n- Retrieving all orders for a specific customer (GET /customers/{customerId}/orders)\n    \n- Getting detailed information about a specific order (GET /customers/{customerId}/orders/{orderId})\n    \n\nThese endpoints manage the purchase process, converting cart items into finalized orders and managing order history."
+		},
+		{
+			"name": "Error Testing",
+			"item": [
+				{
+					"name": "Book Not Found Error",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/books/999",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"books",
+								"999"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Author Not Found Error",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/authors/999",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"authors",
+								"999"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invalid Book Input Error",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"\",\r\n  \"authorId\": 1,\r\n  \"isbn\": \"978-0743273565\",\r\n  \"publicationYear\": 2030,\r\n  \"price\": -5.99,\r\n  \"stock\": -10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/books",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Out of Stock Error",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"bookId\": 1,\r\n  \"quantity\": 1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/customers/1/cart/items",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"1",
+								"cart",
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Empty Cart Order Error",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/customers/1/orders",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"1",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "This folder contains specialized requests designed to test the error handling capabilities of the API. It includes intentionally problematic requests to verify that the API responds appropriately to various error conditions. Examples include:\n\n- Requests for non-existent resources to test 404 Not Found responses\n    \n- Requests with invalid data to test validation logic and 400 Bad Request responses\n    \n- Requests that would violate business rules (like ordering more books than are in stock) to test business logic validation\n    \n\nThese test cases are crucial for ensuring the API behaves correctly when encountering errors, providing appropriate status codes and informative error messages to clients."
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080/bookstore-api/api"
+		}
+	]
+}
