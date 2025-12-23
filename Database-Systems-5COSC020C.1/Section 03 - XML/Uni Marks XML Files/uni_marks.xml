@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone = "yes"?>
+<?xml-stylesheet type="text/xsl" href="uni_marks_modules.xsl"?>
+
+<marksreport>
+  <module moduleCode="MOD101">
+    <modulename>Database Systems</modulename>
+    <moduleleader>Francky Bandini</moduleleader>
+    <student studentId = "21051">
+      <fname>Jim</fname>
+      <sname>Bim</sname>
+      <mark1 type="cwk">86</mark1>
+      <mark2 type="test">80</mark2>      
+    </student>
+    <student studentId = "21033">
+      <fname>Kim</fname>
+      <sname>Li</sname>
+      <mark1 type="cwk">34</mark1>
+      <mark2 type="test">42</mark2>
+    </student>
+    <student studentId = "21044">
+      <fname>Tim</fname>
+      <sname>Amal</sname>
+      <mark1 type="cwk">62</mark1>
+      <mark2 type="test">44</mark2>
+    </student>
+    <student studentId = "21094">
+      <fname>Vikash</fname>
+      <sname>Goode</sname>
+      <mark1 type="cwk">22</mark1>
+      <mark2 type="test">30</mark2>      
+    </student>
+    <student studentId = "21029">
+      <fname>Aldala</fname>
+      <sname>Alim</sname>
+      <mark1 type="cwk">52</mark1>
+      <mark2 type="test">30</mark2>
+    </student>
+  </module>
+  
+  <module moduleCode="MOD102">
+    <modulename>Server-side Web Development</modulename>
+    <moduleleader>Francky Bandini</moduleleader>
+    <student studentId = "21051">
+      <fname>Jim</fname>
+      <sname>Bim</sname>
+      <mark1 type="test">76</mark1>
+      <mark2 type="exam">70</mark2>      
+    </student>
+    <student studentId = "21033">
+      <fname>Kim</fname>
+      <sname>Li</sname>
+      <mark1 type="test">32</mark1>
+      <mark2 type="exam">35</mark2>      
+    </student>
+    <student studentId = "21044">
+      <fname>Tim</fname>
+      <sname>Amal</sname>
+      <mark1 type="test">60</mark1>
+      <mark2 type="exam">40</mark2>
+    </student>
+    <student studentId = "21076">
+      <fname>Ladil</fname>
+      <sname>Manata</sname>
+      <mark1 type="test">76</mark1>
+      <mark2 type="exam">92</mark2>
+    </student>
+  </module>
+
+  <module moduleCode="MOD103">
+    <modulename>Java Programming</modulename>
+    <moduleleader>Francesco Maldini</moduleleader>
+    <student studentId = "21051">
+      <fname>Jim</fname>
+      <sname>Bim</sname>
+      <mark1 type="cwk">44</mark1>
+      <mark2 type="exam">86</mark2>
+    </student>
+    <student studentId = "21033">
+      <fname>Kim</fname>
+      <sname>Li</sname>
+      <mark1 type="cwk">48</mark1>
+      <mark2 type="exam">78</mark2>
+    </student>
+    <student studentId = "21044">
+      <fname>Tim</fname>
+      <sname>Amal</sname>
+      <mark1 type="cwk">44</mark1>
+      <mark2 type="exam">65</mark2>
+    </student>
+    <student studentId = "21094">
+      <fname>Vikash</fname>
+      <sname>Goode</sname>
+      <mark1 type="cwk">42</mark1>
+      <mark2 type="exam">30</mark2>
+    </student>
+     <student studentId = "21004">
+      <fname>Romi</fname>
+      <sname>Lescu</sname>
+      <mark1 type="cwk">44</mark1>
+      <mark2 type="exam">52</mark2>
+    </student>
+    <student studentId = "21017">
+      <fname>Nagara</fname>
+      <sname>Kolski</sname>
+      <mark1 type="cwk">38</mark1>
+      <mark2 type="exam">25</mark2>
+    </student>
+  </module>
+
+</marksreport>
