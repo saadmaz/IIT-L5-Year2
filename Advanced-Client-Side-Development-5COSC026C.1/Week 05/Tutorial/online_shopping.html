@@ -1,125 +1,168 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>CSS Gradients, Animation & Transformation</title>
-<style>
-    /* --- 1. General Styles --- */
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0;
-        /* Necessary to position the absolute ribbon relative to the body */
-        position: relative; 
-        overflow-x: hidden; /* Prevents scrollbar if ribbon sticks out */
-    }
-
-    /* --- 2. Header Styling (Task: Change font, bold, 24px, center, 40px padding) --- */
-    header {
-        font-weight: bold;
-        font-size: 24px;
-        text-align: center;
-        padding: 40px;
-        background-color: #f0f0f0; /* Added light grey to see padding clearly */
-    }
-
-    /* --- 3. Article Header Override (Task: Align left, 18px, 20px padding) --- */
-    /* We use 'article header' to be more specific than just 'header' */
-    article header {
-        text-align: left;
-        font-size: 18px;
-        padding: 20px;
-        background-color: transparent; /* Removing background for inner header */
-        border-bottom: 2px solid #ccc; /* Adding a line to make it look distinct */
-    }
-
-    /* --- 4. The Ribbon Container (Task: Rotate -45deg, position, gradient, shadow) --- */
-    .ribbon {
-        /* Positioning: Absolute places it relative to the nearest positioned ancestor (body) */
-        position: absolute;
-        top: 20px;
-        left: -30px; /* Pulling it left to cut across the corner */
-        
-        /* Transformation: Rotates the element counter-clockwise */
-        transform: rotate(-45deg);
-        
-        /* Background Gradient: Linear gradient from red to orange */
-        background: linear-gradient(45deg, #ff0000, #ff7f50);
-        
-        /* Box Shadow: Adds a 3D effect (horizontal, vertical, blur, color) */
-        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-        
-        width: 200px;
-        text-align: center;
-        z-index: 10; /* Ensures it sits on top of other content */
-    }
-
-    /* --- 5. The Ribbon Link (Task: Color, border, padding, no underline, pretty) --- */
-    .ribbon a {
-        color: white; /* Custom text colour */
-        border: 1px solid white; /* Solid border */
-        padding: 5px 20px; /* Padding */
-        text-decoration: none; /* Remove underline decoration */
-        
-        /* Making it pretty */
-        display: block; /* Makes the link fill the div */
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-
-    /* --- 6. Creating the Animation (Task: Use @keyframes) --- */
-    @keyframes spinner {
-        from {
-            transform: rotate(0deg);
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping Interface</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    
+    <style>
+        /* Custom styles for the footer [cite: 13] */
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            border-top: 1px solid #e9ecef;
         }
-        to {
-            transform: rotate(360deg);
+        /* Style to ensure product images fit nicely in cards */
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
         }
-    }
-
-    /* --- 7. Applying Animation to ONE image (Task: Without Class or ID) --- */
-    /* DIFFICULTY NOTE: 
-       Applying 'img { animation: ... }' would make ALL images spin.
-       To target just one without a class/ID, we use the structure.
-       Here, we target only the image inside the <article> tag.
-    */
-    article img {
-        animation: spinner 3s linear infinite;
-        
-        /* Optional: Makes it look circular while spinning */
-        border-radius: 50%; 
-        width: 100px; /* Setting a fixed size for uniformity */
-        height: 100px;
-    }
-
-    /* Styling other images just for layout tidiness */
-    body > img, footer img {
-        width: 100px;
-        margin: 20px;
-    }
-
-</style>
+    </style>
 </head>
 <body>
 
-    <header>My Tutorial 4</header>
-
-    <img src="https://placehold.co/150x150/png?text=Img+1" alt="Image 1" />
-
-    <article>
-        <header>About this tutorial</header>
-        <p>In this tutorial I need to make a picture spin for ever...</p>
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Welcome to ShopStrap</h1>
+        <p class="lead">Find the best deals on Electronics, Clothing, and Books.</p>
+        <hr class="my-4">
+        <p>Select a category below to browse products.</p>
         
-        <img src="https://placehold.co/150x150/png?text=Spinning!" alt="Spinning Image" />
-    </article>
+        <div class="btn-group" role="group" aria-label="Product Categories">
+            <button type="button" class="btn btn-primary" onclick="filterSelection('all')">Show All</button>
+            <button type="button" class="btn btn-secondary" onclick="filterSelection('electronics')">Electronics</button>
+            <button type="button" class="btn btn-secondary" onclick="filterSelection('clothing')">Clothing</button>
+            <button type="button" class="btn btn-secondary" onclick="filterSelection('books')">Books</button>
+        </div>
+    </div>
 
-    <footer>
-        my footer
-        <br>
-        <img src="https://placehold.co/150x150/png?text=Img+3" alt="Image 3" />
+    <div class="container">
+        <div class="row" id="product-grid">
+
+            <div class="col-12 col-sm-6 col-md-3 mb-4 filter-item electronics">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300?text=Laptop" class="card-img-top" alt="Laptop">
+                    <div class="card-body">
+                        <h5 class="card-title">Pro Laptop</h5>
+                        <p class="card-text">High-performance laptop for all your needs.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3 mb-4 filter-item electronics">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300?text=Headphones" class="card-img-top" alt="Headphones">
+                    <div class="card-body">
+                        <h5 class="card-title">Wireless Headset</h5>
+                        <p class="card-text">Noise-cancelling over-ear headphones.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3 mb-4 filter-item clothing">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300?text=T-Shirt" class="card-img-top" alt="T-Shirt">
+                    <div class="card-body">
+                        <h5 class="card-title">Cotton T-Shirt</h5>
+                        <p class="card-text">100% organic cotton, available in all sizes.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3 mb-4 filter-item clothing">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300?text=Jeans" class="card-img-top" alt="Jeans">
+                    <div class="card-body">
+                        <h5 class="card-title">Classic Jeans</h5>
+                        <p class="card-text">Durable denim jeans with a modern fit.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col-12 col-sm-6 col-md-3 mb-4 filter-item books">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300?text=Novel" class="card-img-top" alt="Book Cover">
+                    <div class="card-body">
+                        <h5 class="card-title">Mystery Novel</h5>
+                        <p class="card-text">A best-selling thriller by John Doe.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3 mb-4 filter-item books">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300?text=Cookbook" class="card-img-top" alt="Cookbook">
+                    <div class="card-body">
+                        <h5 class="card-title">Master Chef</h5>
+                        <p class="card-text">Recipes from around the world.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3 mb-4 filter-item electronics">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300?text=Smart+Watch" class="card-img-top" alt="Smart Watch">
+                    <div class="card-body">
+                        <h5 class="card-title">Smart Watch</h5>
+                        <p class="card-text">Track your fitness and stay connected.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            
+             <div class="col-12 col-sm-6 col-md-3 mb-4 filter-item clothing">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300?text=Sneakers" class="card-img-top" alt="Sneakers">
+                    <div class="card-body">
+                        <h5 class="card-title">Run Sneakers</h5>
+                        <p class="card-text">Lightweight sneakers for daily running.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+        </div> </div> <footer class="footer">
+        <div class="container">
+            <span class="text-muted">© 2023 ShopStrap Inc. All rights reserved.</span>
+        </div>
     </footer>
 
-    <div class="ribbon"><a href="#">My Tutorial 4</a></div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Function to filter cards based on category buttons
+        function filterSelection(category) {
+            // Get all elements with the class 'filter-item' (the columns containing cards)
+            var items = document.getElementsByClassName("filter-item");
+            
+            // Loop through all items
+            for (var i = 0; i < items.length; i++) {
+                // If category is 'all', remove 'd-none' (Bootstrap class for display:none) to show everything
+                if (category == "all") {
+                    items[i].classList.remove("d-none");
+                } else {
+                    // Check if the item has the class of the selected category
+                    if (items[i].classList.contains(category)) {
+                        // If match, remove 'd-none' to show it
+                        items[i].classList.remove("d-none");
+                    } else {
+                        // If no match, add 'd-none' to hide it
+                        items[i].classList.add("d-none");
+                    }
+                }
+            }
+        }
+    </script>
 
 </body>
 </html>
