@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Utilities Example</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Text Alignment Utility
+    container:
+
+    It creates a fixed-width container to hold and center the content within it. 
+    This class ensures proper padding and margins on the sides to maintain a consistent layout.
+    Bootstrap containers have predefined widths based on the screen size, providing a responsive 
+    design and preventing content from extending too wide on larger screens.
+    
+    mt-4:
+    The mt-4 class is a margin utility class in Bootstrap. It applies top margin to the element.
+    mt stands for margin-top, and the number 4 represents the margin size based on Bootstrap's 
+    spacing scale. In Bootstrap, margin and padding classes are available from 0 to 5, where 
+    higher numbers represent larger spacing. In this case, mt-4 sets a relatively larger top margin.
+    
+    -->
+    
+  <div class="container mt-4">
+    <div class="text-center">
+      <h1>Text Alignment Utility</h1>
+      <p class="text-left">Left aligned text on all viewport sizes.</p>
+      <p class="text-center">Center aligned text on all viewport sizes.</p>
+      <p class="text-right">Right aligned text on all viewport sizes.</p>
+    </div>
+    
+    <hr>
+
+    <!-- Spacing Utility -->
+    <div class="mb-4">
+      <h1>Spacing Utility</h1>
+      <div class="p-4 mb-4 bg-light">This element has padding and margin.</div>
+    </div>
+    
+    <hr>
+    
+    <!-- Colors Utility -->
+    <div class="bg-dark text-light p-4">
+      <h1>Colors Utility</h1>
+      <p class="text-primary">This text is in a primary color.</p>
+      <div class="bg-info text-white p-2">This has an informative background color.</div>
+    </div>
+    
+    <hr>
+    
+    <!-- Display Property Utility
+    margin-top 4 and display flex with justify-content space around
+    more examples of justify-content:
+    justify-content-start
+    justify-content-end
+    justify-content-center
+    justify-content-around
+    justify-content-evenly
+    -->
+    <div class="mt-4 d-flex justify-content-between">
+
+      <h1>Display Property Utility</h1>
+
+    <!-- Display Property Utility
+    display none initially for all device sizes
+    then if large devices are being used; display block
+    bg color, text color and padding 3
+    -->
+
+      <div class="d-none d-lg-block bg-secondary text-light p-3">Hidden on smaller devices</div>
+      <div class="d-flex bg-success text-light p-3">This is a flex container</div>
+    </div>
+    
+    <hr>
+    
+    <!-- Flexbox Utility
+    flex-direction column
+    flex-direction row
+
+    For aligning items along the main axis (horizontal axis in a row layout or vertical axis in a column layout) 
+    within a flex container, Bootstrap provides:
+
+    justify-content-start: Aligns items to the start of the main axis.
+    justify-content-center: Aligns items to the center of the main axis.
+    justify-content-end: Aligns items to the end of the main axis.
+
+    Bootstrap provides the following classes for aligning items along the cross axis[y-axis] (perpendicular to main axis):
+
+    align-items-start: Aligns items to the start of the cross axis.
+    align-items-center: Aligns items to the center of the cross axis.
+    align-items-end: Aligns items to the end of the cross axis.
+    
+    
+    -->
+    <div class="mt-5 d-flex flex-column align-items-center">
+      <h1>Flexbox Utility</h1>
+      <div class="d-flex flex-row mb-2">Flex direction: Row</div>
+      <div class="d-flex flex-column align-items-end">Alignment: End</div>
+    </div>
+    
+    <hr>
+    
+    <!-- Responsive Class Utility, what about width and height? -->
+    <div class="mt-4">
+      <h1>Responsive Class Utility</h1>
+      <div class="d-none d-md-block bg-warning text-dark p-3">Visible on medium devices and up.</div>
+      <div class="col-md-6 bg-info text-light p-3">Half-width on medium devices and up.</div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (Optional, for certain components) -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

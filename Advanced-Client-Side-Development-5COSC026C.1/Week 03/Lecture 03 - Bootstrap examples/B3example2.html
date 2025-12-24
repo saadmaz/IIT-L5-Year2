@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customizing Bootstrap Example</title>
+
+  <!-- Bootstrap CSS - Import the Bootstrap CSS file -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS - Add your own CSS -->
+  <style>
+    /* Custom CSS to override Bootstrap's button styles */
+      .btn {
+        background-color: green;
+        color: white;
+      }
+
+    /* Customizing Components and Utilities */
+    .custom-card {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-radius: 10px; /* Adding border-radius for rounded corners */
+    }
+
+    /* Theming with Bootstrap Variables
+        root can refer to html element and can be used to define global variables
+    */
+    :root {
+      --primary-color: #007bff;
+      --secondary-color: #6c757d;
+    }
+
+    .custom-btn {
+      background-color: var(--primary-color);
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    /* Adding Custom CSS */
+    .custom-heading {
+      font-size: 24px;
+      color: var(--secondary-color);
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-4">
+
+    <!-- Bootstrap button -->
+    <button class="btn btn-primary">Primary Button</button>
+
+
+    <!-- Bootstrap Cards with Customization -->
+  <div class="card custom-card">
+    <div class="card-body">
+      <h5 class="card-title">Custom Card Title</h5>
+      <p class="card-text">This card has a customized appearance.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+    
+
+    <h1 class="custom-heading">Customizing Bootstrap Example</h1>
+
+    <div class="custom-card">
+      <p>This is a customized card with custom styles.</p>
+      <button class="custom-btn">Custom Button</button>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
