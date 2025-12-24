@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negation Pseudo-Class Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        /* Apply styles to all paragraphs that do NOT have the class 'highlight' */
+        p:not(.highlight) {
+            color: #888; 
+        }
+
+        /* Styling for highlighted paragraphs */
+        .highlight {
+            color: #007BFF; 
+            font-weight: bold; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Negation Pseudo-Class Example</h1>
+    
+    <p>This paragraph is not highlighted.</p>
+    <p class="highlight">This paragraph is highlighted.</p>
+    <p>This one is also not highlighted.</p>
+    <p class="highlight">Another highlighted paragraph.</p>
+    <p>This is yet another non-highlighted paragraph.</p>
+</body>
+</html>

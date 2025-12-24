@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .box {
+            width: 300px;
+            height: 200px;
+            /* Define the background using two linear gradients and a solid color - creating flag of Tanzania */
+            background:
+                /* First linear gradient, going from top left to bottom right */
+                linear-gradient(to bottom right, #21b539 calc(50% - 40px), #f5cf22 0 calc(50% - 30px), #0000 0),
+                /* Second linear gradient, going from bottom right to top left */
+                linear-gradient(to top left, #00a6e0 calc(50% - 40px), #f5cf22 0 calc(50% - 30px), #0000 0)
+                /* Solid black background color */
+                #000;
+
+                /* Calc function explanantion
+                The calc() function in CSS is a powerful tool for performing mathematical calculations within property values. 
+                It allows you to combine different units of measurement (e.g., pixels, percentages, ems) and perform arithmetic operations on them
+                */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

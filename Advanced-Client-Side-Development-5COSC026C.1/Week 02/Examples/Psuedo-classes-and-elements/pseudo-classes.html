@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 Pseudo-classes Examples</title>
+    <style>
+        /* first item in li */
+        ul li:first-child {
+            color: blue;
+        }
+
+        /* last item in li */
+        ul li:last-child {
+            color: red;
+        }
+
+        /* First paragraph, 3 examples */
+        p:first-of-type {
+            font-weight: bold;
+        }
+
+        /* last paragraph */
+        p:last-of-type {
+            font-style: italic;
+        }
+
+        /* only paragraph in div, what's happening here? */
+        div:only-child {
+            border: 2px solid green;
+        }
+
+        /* Style for the :only-of-type pseudo-class */
+        span:only-of-type {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Examples of CSS3 Pseudo-classes</h1>
+    <ul>
+        <li>First List Item</li>
+        <li>Second List Item</li>
+        <li>Third List Item</li>
+    </ul>
+
+    <p>This is the first paragraph.</p>
+    <p>This is the second paragraph.</p>
+    <p>This is the third paragraph.</p>
+
+    <div>
+        <p>This is the 1st child of the div.</p>
+        <p>This is the second child of the div.</p>
+    </div>
+
+    <span>This is the only span element.</span>
+    
+
+    <div>
+        <P>Only paragraph in div</P>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:not() Pseudo-class Example</title>
+    <style>
+        /* Select all div elements except those with class "myClass" or ID "myId" */
+        div:not(.myClass, #myId) {
+            background-color: lightgray;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>This div will have a light gray background.</div>
+    <div class="myClass">This div will NOT have a light gray background.</div>
+    <div id="myId">This div will NOT have a light gray background.</div>
+    <div>This div will have a light gray background.</div>
+</body>
+</html>

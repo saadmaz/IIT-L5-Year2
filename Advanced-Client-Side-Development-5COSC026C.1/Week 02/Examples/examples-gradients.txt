@@ -1,0 +1,76 @@
+.slide {
+  background-image:
+      repeating-conic-gradient(at top 120px left 100px,magenta 0 5deg, rebeccapurple 5deg 10deg);
+}
+
+
+.slide {
+  background-image:
+      linear-gradient( to right, blue 33%, white 33% 66%, red 66%);
+}
+
+
+.slide {
+  background-image:
+      conic-gradient(green 0 90deg, blue 90deg 180deg, red 180deg 270deg, yellow 270deg );
+}
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angled Stripes</title>
+    <style>
+        #angledStripes {
+            background-color: rebeccapurple;
+            background-image: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.2) 0 25%, 
+                rgba(255, 255, 255, 0) 25% 50%, 
+                rgba(255, 255, 255, 0.2) 50% 75%, 
+                rgba(255, 255, 255, 0) 75% 100% );
+            background-size: 100px 100px;
+            background-repeat: repeat;
+            width: 100px; /* Set the width as desired */
+            height: 100px; /* Set the height as desired */
+        }
+    </style>
+</head>
+<body>
+    <div id="angledStripes"></div>
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Example</title>
+    <style>
+        #backgroundExample {
+            background-color: rebeccapurple;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 50%), 
+                linear-gradient(to right, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 50%);
+            background-size: 100px 100px, 100px 100px;
+            width: 200px; /* Set the width as desired */
+            height: 200px; /* Set the height as desired */
+        }
+    </style>
+</head>
+<body>
+    <div id="backgroundExample"></div>
+</body>
+</html>
+
+
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007BFF; 
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .box {
+            flex: 1 1 300px; /* Flex-grow, flex-shrink, flex-basis */
+            margin: 10px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Media Query for tablets and above */
+        @media (min-width: 768px) {
+            header {
+                font-size: 2em; /* Increase font size on larger screens */
+            }
+        }
+
+        /* Media Query for desktops */
+        @media (min-width: 1024px) {
+            .box {
+                flex: 1 1 200px; /* Smaller flex-basis for desktop */
+            }
+        }
+
+        /* Media Query for mobile devices */
+        @media (max-width: 480px) {
+            header {
+                font-size: 1.5em; /* Decrease font size on small screens */
+            }
+
+            .container {
+                flex-direction: column; /* Stack boxes vertically */
+            }
+
+            .box {
+                flex: 1 1 100%; /* Full width on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Responsive Web Design Example</h1>
+    </header>
+    
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+    </div>
+
+    <footer style="text-align: center; padding: 20px; background-color: #007BFF; color: white;">
+        © 2024 Responsive Design Example
+    </footer>
+</body>
+</html>

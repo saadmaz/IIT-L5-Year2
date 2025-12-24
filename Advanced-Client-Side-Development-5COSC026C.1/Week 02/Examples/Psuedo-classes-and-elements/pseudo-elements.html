@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo-elements Examples</title>
+    <style>
+        /* ::first-line pseudo-element */
+        p::first-line {
+            font-weight: bold;
+            color: blue;
+        }
+
+        /* ::first-letter pseudo-element */
+        p::first-letter {
+            font-size: 150%;
+            color: red;
+        }
+
+        /* ::selection pseudo-element */
+        p::selection {
+            background-color: yellow;
+            color: black;
+        }
+
+        /* ::before pseudo-element */
+        .before-demo::before {
+            content: "Before text: ";
+            font-weight: bold;
+            color: green;
+        }
+
+        /* ::after pseudo-element */
+        .after-demo::after {
+            content: " After text!";
+            font-style: italic;
+            color: purple;
+        }
+
+        /* ::placeholder pseudo-element */
+        input::placeholder {
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Pseudo-elements Examples</h1>
+    
+    <p>This is an example of <a href="#">::first-line</a> pseudo-element. It styles the first line of text in this paragraph.</p>
+
+    <p>This is an example of <a href="#">::first-letter</a> pseudo-element. It styles the first letter of this paragraph.</p>
+
+    <p>This is an example of <a href="#">::selection</a> pseudo-element. Highlight this text to see the style change.</p>
+
+    <p class="before-demo">This is an example of <a href="#">::before</a> pseudo-element. It adds content before this paragraph.</p>
+
+    <p class="after-demo">This is an example of <a href="#">::after</a> pseudo-element. It adds content after this paragraph.</p>
+
+    <input type="text" placeholder="This is an example of ::placeholder pseudo-element">
+</body>
+</html>

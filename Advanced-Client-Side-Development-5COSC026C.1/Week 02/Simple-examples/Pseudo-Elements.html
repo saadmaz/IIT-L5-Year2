@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Elements Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        /* Style for the first letter */
+        .first-letter::first-letter {
+            font-size: 2em;
+            color: #007BFF; 
+            font-weight: bold;         }
+
+        /* Style for the first line */
+        .first-line::first-line {
+            font-style: italic;
+            color: #28a745; 
+        }
+
+        /* Style for adding content before an element */
+        .before::before {
+            content: "Note: "; 
+            font-weight: bold; 
+            color: #dc3545; 
+        }
+
+        /* Style for adding content after an element */
+        .after::after {
+            content: " - This is added content."; 
+            font-style: italic; 
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo-Elements Example</h1>
+    
+    <h2>Example 1: First Letter</h2>
+    <p class="first-letter">This is an example of using the ::first-letter pseudo-element to style the first letter of this paragraph.</p>
+
+    <h2>Example 2: First Line</h2>
+    <p class="first-line">This is an example of using the ::first-line pseudo-element to style the first line of this paragraph.</p>
+
+    <h2>Example 3: Before Content</h2>
+    <p class="before">This paragraph demonstrates the use of the ::before pseudo-element to add text before it.</p>
+
+    <h2>Example 4: After Content</h2>
+    <p class="after">This paragraph demonstrates the use of the ::after pseudo-element to add text after it.</p>
+
+</body>
+</html>

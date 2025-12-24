@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Selectors Example</title>
+    <style>
+        /* Style for input elements with type="text" */
+        input[type="text"] {
+            border: 2px solid blue;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        /* Style for anchor elements whose href starts with "https" */
+        a[href^="https"] {
+            color: green;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* Style for elements with a class that contains "button" */
+        [class*="button"] {
+            background-color: yellow;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        /* Style for elements with target attribute */
+        a[target] {
+            background-color: yellow;
+          }
+    </style>
+</head>
+<body>
+    <h1>Attribute Selectors Example</h1>
+
+    <h2>Input Example</h2>
+    <input type="text" placeholder="Enter your name">
+    <input type="password" placeholder="Enter your password">
+
+    <h2>Link Example</h2>
+    <a href="https://www.example.com">Secure Link</a><br>
+    <a href="http://www.example.com">Insecure Link</a>
+
+    <h2>Button Example</h2>
+    <button class="primary-button">Submit</button>
+    <button class="secondary-button">Cancel</button>
+    <div class="button-container">Buttons inside a div</div>
+
+
+    <h2>The links with a target attribute gets a yellow background:</h2>
+    <a href="https://www.google.com">Google</a>
+    <a href="http://www.facebook.com" target="_blank">Facebook</a>
+    <a href="http://www.youtube.com" target="_top">Youtube</a>
+</body>
+</html>

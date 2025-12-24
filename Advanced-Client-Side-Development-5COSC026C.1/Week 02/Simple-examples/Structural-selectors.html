@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Pseudo-Class Selectors Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        
+        button {
+            background-color: #007BFF; 
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 10px 0;
+        }
+
+        /* Hover effect to show the info div */
+        button:hover + .info {
+            display: block; 
+        }
+
+        /* Info div hidden by default */
+        .info {
+            display: none;
+            background-color: #e9ecef; 
+            border: 1px solid #ced4da;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        /* Style for the first child */
+        .container p:first-child {
+            font-weight: bold; 
+            color: #28a745; 
+        }
+
+        /* Style for the first of type */
+        .container p:first-of-type {
+            text-decoration: underline; 
+        }
+
+        /* Style for the only child */
+        .only-child {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <h1>UI Pseudo-Class Selectors Example</h1>
+    
+    <div class="container">
+        <p>This is the first paragraph (bold).</p>
+        <p>This is the second paragraph.</p>
+        <p class="only-child">This is an only child paragraph.</p>
+    </div>
+
+    <h2>Hover Button Example</h2>
+    <button>Hover over me!</button>
+    <div class="info">
+        <p>This info appears when you hover over the button.</p>
+    </div>
+</body>
+</html>

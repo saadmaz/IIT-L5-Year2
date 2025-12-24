@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity Example</title>
+    <style>
+        /* Global selector (lowest specificity) */
+        * {
+            font-size: 16px;
+        }
+
+        /* Type selector (higher specificity) */
+        p {
+            font-weight: bold;
+        }
+
+        /* Class selector (higher specificity) */
+        .my-class {
+            color: blue;
+        }
+
+        /* Inline styles with !important (highest specificity) */
+        #my-heading {
+            font-size: 24px !important;
+            color: red !important;
+        }
+
+        /* ID selector (higher specificity) */
+        #my-heading {
+            font-style: italic;
+            color: green;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1 id="my-heading" class="my-class">This is a heading</h1>
+    <p>This is a paragraph.</p>
+</body>
+</html>

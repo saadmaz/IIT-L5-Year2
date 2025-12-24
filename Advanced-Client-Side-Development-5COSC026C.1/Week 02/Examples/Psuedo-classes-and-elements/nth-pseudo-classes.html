@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 Pseudo-classes Examples</title>
+    <style>
+        /* Select the third list item */
+        ul li:nth-child(3n) {
+            color: blue;
+        }
+
+        /* Select odd-numbered list items, counting starts from the end */
+        ul li:nth-last-child(odd) {
+            background-color: yellow;
+        }
+
+        /* Select the fifth paragraph element */
+        p:nth-of-type(5) {
+            font-weight: bold;
+        }
+
+        /* Select every 3rd paragraph element counting from the end, starting with the 1st, note: there is no nth-first-of-type property*/
+        p:nth-last-of-type(3n+1) {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Examples of CSS3 Pseudo-classes</h1>
+    <ul>
+        <li>First List Item</li>
+        <li>Second List Item</li>
+        <li>Third List Item (blue text)</li>
+        <li>Fourth List Item</li>
+        <li>Fifth List Item (yellow background)</li>
+        <li>Sixth List Item</li>
+    </ul>
+
+    <p>This is the first paragraph.</p>
+    <p>This is the second paragraph.</p>
+    <p>This is the third paragraph.</p>
+    <p>This is the fourth paragraph.</p>
+    <p>This is the fifth paragraph (bold text).</p>
+    <p>This is the sixth paragraph (italic text).</p>
+
+    <div>
+        <p>This is the 1st child of the div.</p>
+        <p>This is the second child of the div.</p>
+    </div>
+</body>
+</html>

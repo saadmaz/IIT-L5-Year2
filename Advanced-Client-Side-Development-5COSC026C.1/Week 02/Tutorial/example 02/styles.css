@@ -1,0 +1,66 @@
+/* Reset some default styles for a clean look */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the loader vertically and horizontally */
+body {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid #3498db;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite, fadeOut 2s forwards;
+    opacity: 1;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Hide the spinner after it fades out */
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; display: none; }
+}
+
+/* Additional styling for your content */
+.content {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 2s 2s forwards, slideIn 2s 2s forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideIn {
+    0% { transform: translateY(20px); }
+    100% { transform: translateY(0); }
+}
+
+/* Additional styling for your content */
+h1, p {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+/* Add more styles as needed */

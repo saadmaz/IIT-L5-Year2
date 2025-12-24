@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:not() Pseudo-class Example</title>
+    <style>
+        /* Select all links except those with class "external" */
+        a:not(.external) {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">Regular Link (underlined)</a>
+    <a href="#" class="external">External Link (is underlined)</a>
+    <a href="#">Another Regular Link (underlined)</a>
+</body>
+</html>
