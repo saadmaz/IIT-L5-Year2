@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Keyword Example</title>
+</head>
+<body>
+    <h1>This Keyword Example</h1>
+    <script>
+        // 1. Outside of a function (global context)
+        console.log("Outside function: ", this); // In a browser, this refers to the global object (Window)
+
+        // 2. Inside a regular function
+        function showThisInFunction() {
+            console.log("Inside a regular function: ", this); // In a non-strict mode, this refers to the global object (Window)
+        }
+
+        showThisInFunction(); 
+
+        // 3. Inside a strict function
+        function showThisInStrictFunction() {
+            "use strict"; // Enabling strict mode
+            console.log("Inside a strict function: ", this); // In strict mode, this is undefined
+        }
+
+        showThisInStrictFunction(); 
+
+        // 4. Inside an object method
+        const person = {
+            name: "Ebad",
+            greet: function() {
+                console.log("Inside an object method: Hello, my name is " + this.name + "."); // this refers to the object (person)
+            }
+        };
+
+        person.greet(); // Output: Hello, my name is Ebad.
+    </script>
+</body>
+</html>

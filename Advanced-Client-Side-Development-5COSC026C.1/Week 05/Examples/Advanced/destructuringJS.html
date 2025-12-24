@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Example</title>
+</head>
+<body>
+    <h1>Array and Object Destructuring Example</h1>
+    <script>
+        // Array Destructuring
+        const fruits = ['apple', 'banana', 'mango'];
+
+        // Destructuring array
+        const [firstFruit, secondFruit, thirdFruit] = fruits;
+
+        console.log("First fruit:", firstFruit);  // Output: apple
+        console.log("Second fruit:", secondFruit); // Output: banana
+        console.log("Third fruit:", thirdFruit);  // Output: mango
+
+        // Object Destructuring
+        const person = {
+            firstName: 'Ebad',
+            lastName: 'Majeed',
+            age: 30
+        };
+
+        // Destructuring object
+        const { firstName, lastName, age } = person;
+
+        console.log("First name:", firstName);  // Output: Ebad
+        console.log("Last name:", lastName);   // Output: Majeed
+        console.log("Age:", age);              // Output: 30
+    </script>
+</body>
+</html>

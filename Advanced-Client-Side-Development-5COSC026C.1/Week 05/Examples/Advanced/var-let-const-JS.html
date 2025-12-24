@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Declaration Example</title>
+</head>
+<body>
+    <h1>Using const, let, and var</h1>
+    <script>
+        // Using const for a constant value
+        const pi = 3.14; // pi cannot be changed
+        console.log("Value of pi:", pi);
+
+        // Using let for block-scoped variable
+        let radius = 5; // radius can be changed
+        console.log("Radius:", radius);
+
+        // Function to calculate area of a circle
+        function calculateArea() {
+            // Using var for function-scoped variable
+            var area = pi * radius * radius;
+            console.log("Area of the circle:", area);
+        }
+
+        // Call the function
+        calculateArea();
+
+        // Change the radius using let
+        radius = 10; // This is allowed since radius is declared with let
+        console.log("Updated Radius:", radius);
+        
+        // Call the function again with the new radius
+        calculateArea();
+
+        // Uncommenting the next line would cause an error because pi is a constant
+        // pi = 3.14159; // Error: Assignment to constant variable
+
+        // Example of var scope
+        if (true) {
+            var message = "Hello, World!"; // var is function-scoped, still accessible outside
+        }
+        console.log(message); // Outputs: Hello, World!
+    </script>
+</body>
+</html>

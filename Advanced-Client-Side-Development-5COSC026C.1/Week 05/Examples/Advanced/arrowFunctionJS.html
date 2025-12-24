@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function Example</title>
+</head>
+<body>
+    <h1>Arrow Function Example</h1>
+    <script>
+        // Traditional function
+        function add(a, b) {
+            return a + b;
+        }
+        console.log("Sum using traditional function:", add(5, 3)); // Output: 8
+
+        // Arrow function
+        const addArrow = (a, b) => a + b;
+        console.log("Sum using arrow function:", addArrow(5, 3)); // Output: 8
+
+        // Arrow function with no parameters
+        const greet = () => "Hello, World!";
+        console.log(greet()); // Output: Hello, World!
+
+        // Arrow function with a single parameter
+        const square = x => x * x;
+        console.log("Square of 4:", square(4)); // Output: 16
+    </script>
+</body>
+</html>

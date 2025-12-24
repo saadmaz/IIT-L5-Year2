@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Example</title>
+</head>
+<body>
+    <h1>Promise Example</h1>
+    <script>
+        // Creating a new Promise
+        const myPromise = new Promise((resolve, reject) => {
+            const success = true; // change this to false to see the rejection
+
+            setTimeout(() => {
+                if (success) {
+                    resolve("The promise was resolved successfully!");
+                } else {
+                    reject("The promise was rejected.");
+                }
+            }, 2000); // Simulate async operation (2 seconds)
+        });
+
+        // Using the Promise
+        myPromise
+            .then(result => {
+                console.log(result);  // Output: "The promise was resolved successfully!"
+            })
+            .catch(error => {
+                console.log(error);  // Output if rejected: "The promise was rejected."
+            });
+
+        console.log("Promise is pending...");  // This runs immediately
+    </script>
+</body>
+</html>
