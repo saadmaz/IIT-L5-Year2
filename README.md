@@ -73,9 +73,9 @@ All work is my own unless stated otherwise and should not be copied for academic
 
 If you have questions, feedback, or would like to discuss any of the material:
 
-- **GitHub:** (your GitHub profile link)
-- **Email:** (your email address)
-- **LinkedIn:** (optional)
+- **GitHub:** www.github.com/saadmaz
+- **Email:** saadmazaa@gmail.com
+- **LinkedIn:** www.linkedin.com/in/saadmaz
 
 ---
 
