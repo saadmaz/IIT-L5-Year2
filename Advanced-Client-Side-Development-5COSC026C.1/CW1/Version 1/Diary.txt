@@ -1,0 +1,79 @@
+# 12th Oct 2024
+Started reading the spec. 
+Identified what needs to be done and planned the next few days accordingly. 
+
+
+# 14th Oct 2024
+Started finding for inspirations. used Linkedin, Github and youtube.
+tried coding different styles.
+
+# 15th Oct 2024
+Started work 
+Defined key sections to include (About Me, Blog Posts, and Contact Me)
+Decided on a modern, clean design with a cohesive color scheme that would be used across all pages. (decided to go with Sea green)
+Sketched initial layout ideas and planned interactive elements like hover effects for buttons and navigation links.
+
+# 18th Oct 2024
+Set up the basic HTML and CSS structure for the site.
+Created a fixed header with navigation links to key sections like Home, About Me, Blog, and Contact.
+Added hover effects to the navigation links for a more dynamic experience.
+
+
+# 20th Oct 2024
+Developed the footer to include navigation links, social media icons.
+Finished half of the Header. (but not satisfied)
+
+# 21st Oct 2024
+Changed the Colour palette to orangish yellow. 
+Finished the header.
+made it responsive. 
+completed half of the home page banner. included media queries. 
+
+# 22nd Oct 2024
+Created an About Me section with a placeholder paragraph, explaining my journey
+Added a divider and designed small containers to showcase my educational qualifications, complete with institution logos for visual appeal.
+Designed a "Download My CV" button with hover effects - Modifications to be made. 
+Began working on the Blog Posts area
+
+# 23rd Oct 2024
+Finalized blog area and started on the contact section.
+used internet images
+used AI to generate blog topics. 
+
+# 24th Oct 2024
+Completed the Blog and about me page, making it responsive. 
+Added a View More Blogs button with hover effects to encourage readers to explore more content. - on the home page
+
+# 26th Oct 2024
+Started working on the Contact me page.
+watched youtube tutorials on portfolios
+
+# 28th Oct 2024
+Changed the home page front view. 
+Added the news letter part to the beginning. 
+
+# 1st Nov 2024
+Final touches on the Contact Me page and newsletter form.
+Footer needs a little bit of changes. 
+Tested and refined all interactive elements, including buttons, links, and form inputs, to ensure a smooth user experience across devices.
+A few buttons needs touch up.
+
+# 3rd Nov 2023
+Connected the pages. 
+connected links.
+
+
+Inspirations 
+https://youtu.be/8GTB2ge0-ZM?si=hYr0UgFRV7yLA_2A
+https://youtu.be/8jpRWPVVNoQ?si=juPw4qRLVLkJR-FR
+https://youtu.be/ro5WmygW92w?si=o-VlKaPg_WhTidoD
+
+https://www.w3schools.com/css/css_pseudo_elements.asp
+
+https://www.linkedin.com/pulse/how-personal-portfolio-website-can-benefit-you-build-one-nahid-ahmed/
+
+https://pawantech12.github.io/portfolio-website/
+
+https://github.com/bedimcode/responsive-portfolio-website-Alexa/blob/main/index.html
+https://github.com/codewithsadee/vcard-personal-portfolio
+https://github.com/HugoBlox/theme-academic-cv
