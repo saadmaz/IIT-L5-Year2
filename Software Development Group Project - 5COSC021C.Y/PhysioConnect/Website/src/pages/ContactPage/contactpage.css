@@ -1,7 +1,7 @@
 /* Contact Page */
 .contact-page {
   padding-top: 80%;
-  background-image: url("../../team/Home.png");
+  background-image: url("../../assets/Home.png");
   background-size: cover;
   /* Ensures image covers the entire screen */
   background-position: center;
