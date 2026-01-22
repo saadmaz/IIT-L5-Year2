@@ -1,0 +1,124 @@
+/* Contact Page */
+.contact-page {
+  padding-top: 80%;
+  background-image: url("../../team/Home.png");
+  background-size: cover; /* Ensures image covers the entire screen */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating */
+  background-attachment: fixed; /* Keeps background fixed on scroll */
+  width: 100vw; /* Ensures it takes full viewport width */
+  height: 100vh;
+  color: #174a21;
+  padding: 3rem 2rem;
+  text-align: center;
+  padding-bottom: 20%;
+}
+
+/* Page Heading */
+.contact-page h1 {
+  font-size: 2.5rem;
+  color: #000000;
+}
+
+/* Intro Text */
+.contact-intro {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Tabs Container */
+.tabs-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Tabs List */
+.tab-list {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  border-bottom: 2px solid #1f664a;
+  padding-bottom: 0.5rem;
+}
+
+/* Individual Tabs */
+.tab {
+  background-color: transparent;
+  color: #2a6e48;
+  font-size: 1rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab:hover {
+  background-color: #184a2a;
+  color: #FFFFFF;
+}
+
+/* Active Tab */
+.react-tabs__tab--selected {
+  background-color: #154a2f;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+/* Contact Details */
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+/* Individual Contact Item */
+.contact-item {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1.2rem;
+  width: 80%;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.419);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Contact Icons */
+.contact-icon {
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 1%;
+  padding-top: 1%;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .contact-form {
+      padding: 1.5rem;
+  }
+
+  .contact-item {
+      padding: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) { /* iPhone 14 Pro & Small Devices */
+  .contact-form {
+      padding: 1rem;
+  }
+
+  .contact-item p {
+      font-size: 0.9rem;
+  }
+}
