@@ -1,9 +1,0 @@
-Date: 2026-01-16
-Time: 00:23:36.826383
-Start: Alvin
-End: Razi
-Amount: 80 KMD
-
-Promo: 0 KMD
-Random Reduction: 5 KMD
-Final payment: 75 KMD
