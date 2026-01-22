@@ -3,6 +3,8 @@ body {
   margin: 0;
   font-family: 'Poppins';
   color: #E3F3F3;
+  line-height: 1.6;
+  font-weight: 300;
   overflow-x: hidden;
 }
 
@@ -37,6 +39,24 @@ html,
 body {
   overflow-x: hidden;
   scroll-behavior: smooth;
+}
+
+/* Glassmorphism Utility */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border-radius: 16px;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Ensure Full Width Layout */

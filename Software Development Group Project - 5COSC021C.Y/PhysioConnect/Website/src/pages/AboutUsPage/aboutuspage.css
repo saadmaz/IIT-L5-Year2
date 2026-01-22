@@ -1,15 +1,20 @@
 .about-us-page {
   background-image: url("../../team/Home.png");
-  background-size: cover; /* Ensures image covers the entire screen */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents repeating */
-  background-attachment: fixed; /* Keeps background fixed on scroll */
-  width: 100vw; /* Ensures it takes full viewport width */
-  height: 100vh;
+  background-size: cover;
+  /* Ensures image covers the entire screen */
+  background-position: center;
+  /* Centers the image */
+  background-repeat: no-repeat;
+  /* Prevents repeating */
+  background-attachment: fixed;
+  /* Keeps background fixed on scroll */
+  width: 100vw;
+  /* Ensures it takes full viewport width */
+  min-height: 100vh;
+  height: auto;
   color: #ffffff;
   padding: 1%;
   text-align: center;
-  min-height: 100vh;
 }
 
 .header {
@@ -24,12 +29,19 @@
 }
 
 .team-card {
-  background-color: #00000000;
-  width: 220px; /* Ensure consistent width */
+  background: rgba(0, 0, 0, 0.4);
+  /* Dark glass for readability */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  width: 220px;
   text-align: center;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   overflow: hidden;
+  padding: 1.5rem 0.5rem;
+  color: #E3F3F3;
 }
 
 .team-card:hover {
@@ -71,36 +83,38 @@
 /* Mobile Optimization */
 @media (max-width: 1024px) {
   .team-section {
-      grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .team-card {
-      width: 100%;
-      padding: 1.2rem;
+    width: 100%;
+    padding: 1.2rem;
   }
 
   .team-section {
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
   }
 }
 
-@media (max-width: 480px) { /* iPhone 14 Pro & Small Devices */
+@media (max-width: 480px) {
+
+  /* iPhone 14 Pro & Small Devices */
   .team-card img {
-      max-width: 80px;
+    max-width: 80px;
   }
 
   .team-card h3 {
-      font-size: 1.4rem;
+    font-size: 1.4rem;
   }
 
   .team-card .role {
-      font-size: 0.9rem;
+    font-size: 0.9rem;
   }
 
   .team-card p {
-      font-size: 0.85rem;
+    font-size: 0.85rem;
   }
 }

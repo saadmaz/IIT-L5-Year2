@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import "./herosection.css";
 
 const HeroSection = () => {
@@ -12,13 +12,7 @@ const HeroSection = () => {
       </video>
 
       <div className="hero-content">
-        <h1
-          className={`hero-title ${isHovered ? "hovered" : ""}`}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          Empower Your Recovery Anytime, Anywhere
-        </h1>
+        {/* Text removed as requested */}
       </div>
     </div>
   );

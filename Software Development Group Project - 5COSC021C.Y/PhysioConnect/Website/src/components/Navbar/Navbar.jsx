@@ -22,7 +22,7 @@ const Navbar = () => {
             How It Works
           </Link>
           <Link to="about-us" smooth={true} duration={800} onClick={() => setMenuOpen(false)}>
-            About Us
+            Our Team
           </Link>
           <Link to="contact" smooth={true} duration={800} onClick={() => setMenuOpen(false)}>
             Contact
