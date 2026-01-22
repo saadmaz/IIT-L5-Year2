@@ -13,26 +13,7 @@ html {
 /* Navbar styles moved to navbar.css */
 
 /* Hero Section */
-.hero-section {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("../src/assets/physioconnect_home.png");
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-}
-
-.hero-title {
-  font-size: 3rem;
-  color: #ffffff;
-}
-
-.hero-subtitle {
-  font-size: 1.5rem;
-  color: #B0B0B0;
-}
+/* Hero styles moved to herosection.css */
 
 /* Features Section */
 .features {
@@ -71,8 +52,8 @@ html {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #0d4c34;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--color-white);
   padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
@@ -81,55 +62,4 @@ html {
 
 .back-to-top:hover {
   opacity: 0.8;
-}
-
-/* Responsive Styles */
-/* Prevents Horizontal Scroll */
-html,
-body {
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
-
-/* Ensure Full Width Layout */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-/* General Typography Scaling */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.6rem;
-  }
-
-  p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-
-  /* iPhone 14 Pro & Small Devices */
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  p {
-    font-size: 0.95rem;
-  }
-
-  .container {
-    padding: 0.8rem;
-  }
-
 }
