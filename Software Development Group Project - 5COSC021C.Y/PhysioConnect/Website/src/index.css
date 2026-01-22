@@ -1,8 +1,28 @@
+/* Global CSS Variables for Standardization */
+:root {
+  /* Colors */
+  --primary-color: #1F6662;
+  --primary-hover: #0E3F3F;
+  --secondary-color: #0E3F3F;
+  --text-primary: #000000;
+  --text-secondary: #E3F3F3;
+  --bg-overlay: rgba(0, 0, 0, 0.4);
+
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: blur(10px);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+  /* Fonts */
+  --font-family-main: 'Poppins', sans-serif;
+}
+
 /* Updated Global Styles (index.css) */
 body {
   margin: 0;
-  font-family: 'Poppins';
-  color: #E3F3F3;
+  font-family: var(--font-family-main);
+  color: var(--text-secondary);
   line-height: 1.6;
   font-weight: 300;
   overflow-x: hidden;
@@ -14,8 +34,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Poppins', sans-serif;
-  color: #000000;
+  font-family: var(--font-family-main);
+  color: var(--text-primary);
 }
 
 a {

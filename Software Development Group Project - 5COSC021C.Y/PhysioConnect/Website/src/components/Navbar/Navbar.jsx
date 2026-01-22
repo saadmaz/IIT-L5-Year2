@@ -8,12 +8,14 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="container navbar-container">
+        {/* Logo Section */}
         <div className="navbar-logo">
           <Link to="home" smooth={true} duration={800} onClick={() => setMenuOpen(false)}>
             PhysioConnect
           </Link>
         </div>
 
+        {/* Desktop & Mobile Navigation Links */}
         <div className={`navbar-links ${menuOpen ? "open" : ""}`}>
           <Link to="features" smooth={true} duration={800} onClick={() => setMenuOpen(false)}>
             Features
@@ -29,6 +31,7 @@ const Navbar = () => {
           </Link>
         </div>
 
+        {/* Hamburger Menu Toggle for Mobile */}
         <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
           <span></span>
           <span></span>

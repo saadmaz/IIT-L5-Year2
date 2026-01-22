@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Element, animateScroll as scroll } from "react-scroll";
 import Navbar from "../src/components/Navbar/Navbar";
 import HomePage from "../src/pages/HomePage/HomePage";
@@ -27,9 +27,10 @@ const App = () => {
 
   return (
     <div className="App">
+      {/* Navigation Bar - Fixed at top */}
       <Navbar />
 
-      {/* 🔥 Fix Scroll Names to Match Links */}
+      {/* Pages mapped to React Scroll Elements */}
       <Element name="home">
         <HomePage />
       </Element>
@@ -50,8 +51,10 @@ const App = () => {
         <ContactPage />
       </Element>
 
+      {/* Footer Section */}
       <Footer />
 
+      {/* Scroll to Top Button (Visible after scrolling down) */}
       {showButton && (
         <button className="back-to-top" onClick={() => scroll.scrollToTop()}>
           ⬆ Back to Top
