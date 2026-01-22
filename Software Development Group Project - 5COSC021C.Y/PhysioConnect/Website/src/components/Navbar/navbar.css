@@ -1,73 +1,90 @@
 /* Navbar.css */
 .navbar {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  /* Glassmorphism/Dark Theme */
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+}
+
+.navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  padding: 1rem 2rem;
-  background-color: #0000001c;
-  color: #ffffff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-top: auto;
 }
 
 .navbar-logo a {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 700;
   color: #ffffff;
   text-decoration: none;
+  letter-spacing: 0.5px;
 }
 
 .navbar-links {
-  align-items: center;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
+  align-items: center;
 }
 
 .navbar-links a {
-  align-items: center;
-  justify-content: center;
-  color: #000000;
+  color: #E3F3F3;
   text-decoration: none;
   font-size: 1rem;
-  transition: color 0.3s;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
 }
 
 .navbar-links a:hover {
   color: #1F6662;
 }
 
-.navbar-menu-toggle {
+.menu-toggle {
   display: none;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
   cursor: pointer;
 }
 
-.navbar-menu-toggle .bar {
-  width: 25px;
+.menu-toggle span {
+  width: 28px;
   height: 3px;
   background-color: #E3F3F3;
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
   .navbar-links {
     display: none;
     flex-direction: column;
-    background-color: #0E3F3F;
     position: absolute;
     top: 100%;
-    right: 0;
+    left: 0;
     width: 100%;
-    padding: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
   }
 
   .navbar-links.open {
     display: flex;
   }
 
-  .navbar-menu-toggle {
-    display: flex;
+  .navbar-links a {
+    font-size: 1.2rem;
+    padding: 10px 0;
+    display: block;
   }
 }

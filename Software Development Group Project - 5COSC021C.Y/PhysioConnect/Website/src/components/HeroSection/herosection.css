@@ -1,61 +1,63 @@
 .hero-section {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    /* Fallback */
 }
 
+/* Video Background */
 .hero-section video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
 }
 
+/* Optional Overlay if video needs darkening */
 .hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.4); /* Adjust opacity here */
-  z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  padding-top: 25vh;
-  color: white;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    width: 100%;
+    max-width: 1000px;
+    /* Constrain width for readability */
+    padding: 0 1rem;
 }
 
-
 .hero-title {
-    font-size: 1.5rem;
-    padding-top: 100%;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
     transition: all 0.3s ease-in-out;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-title.hovered {
     color: #1F6662;
-    transform: scale(1.1);
+    transform: scale(1.05);
+    /* Slightly reduced scale for smoother effect */
 }
 
-.cta-button {
-    padding: 12px 30px;
-    font-size: 1rem;
-    background-color: #1F6662;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #0E3F3F;
-}
-
+/* Reuse existing animation classes if needed elsewhere, otherwise keep simple */
 .hero-animation {
     display: flex;
     justify-content: center;
@@ -65,64 +67,36 @@
     animation: fadeIn 3s ease-in-out forwards;
 }
 
-.rotating-model img {
-    width: 300px;
-    height: auto;
-    border-radius: 8px;
-}
-
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
-/* Responsive Styles */.hero-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    background-image: url("../../assets/physioconnect_home.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: center;
-    padding: 2rem;
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
 }
 
-/* Mobile Optimization */
 @media (max-width: 768px) {
     .hero-title {
         font-size: 2rem;
     }
 
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-
-    .cta-button {
-        font-size: 0.9rem;
-        padding: 10px 20px;
+    .hero-content {
+        padding-top: 0;
+        /* Centered by flexbox, no need for top padding */
     }
 }
 
-@media (max-width: 480px) { /* iPhone 14 Pro & Small Devices */
+@media (max-width: 480px) {
     .hero-title {
-        font-size: 1.5rem;
-    }
-
-    .hero-subtitle {
-        font-size: 0.9rem;
-    }
-
-    .cta-button {
-        font-size: 0.8rem;
-        padding: 8px 15px;
-    }
-
-    .hero-section {
-        padding: 1rem;
-        background-size: contain;
+        font-size: 1.8rem;
     }
 }

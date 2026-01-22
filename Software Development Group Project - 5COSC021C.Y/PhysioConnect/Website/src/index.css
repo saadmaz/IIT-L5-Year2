@@ -6,7 +6,12 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Poppins', sans-serif;
   color: #000000;
 }
@@ -28,7 +33,8 @@ button {
 
 /* Media Queries for Responsive Design */
 /* Prevents Horizontal Scroll */
-html, body {
+html,
+body {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -38,42 +44,46 @@ html, body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* General Typography Scaling */
 @media (max-width: 768px) {
   h1 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   h2 {
-      font-size: 1.6rem;
+    font-size: 1.6rem;
   }
 
   p {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 }
 
-@media (max-width: 480px) { /* iPhone 14 Pro & Small Devices */
+@media (max-width: 480px) {
+
+  /* iPhone 14 Pro & Small Devices */
   h1 {
-      font-size: 1.8rem;
+    font-size: 1.8rem;
   }
 
   h2 {
-      font-size: 1.4rem;
+    font-size: 1.4rem;
   }
 
   p {
-      font-size: 0.95rem;
+    font-size: 0.95rem;
   }
 
   .container {
-      padding: 0.8rem;
+    padding: 0.8rem;
   }
 
   button {
-      font-size: 0.9rem;
-      padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.5rem;
   }
 }

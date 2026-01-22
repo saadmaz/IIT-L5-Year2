@@ -3,9 +3,9 @@ import "./featurespage.css";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
-import { 
-  FaHandHoldingMedical, FaUserMd, FaVideo, FaChartLine, FaBookOpen, FaUserShield, 
-  FaBrain, FaDumbbell, FaMedkit, FaHospitalAlt, FaRobot, FaMapMarkerAlt, FaBell, FaTabletAlt 
+import {
+  FaHandHoldingMedical, FaUserMd, FaVideo, FaChartLine, FaBookOpen, FaUserShield,
+  FaBrain, FaDumbbell, FaMedkit, FaHospitalAlt, FaRobot, FaMapMarkerAlt, FaBell, FaTabletAlt
 } from "react-icons/fa";
 import { MdHealthAndSafety, MdOutlineHealthAndSafety } from "react-icons/md";
 import { GiBodySwapping } from "react-icons/gi";
@@ -44,28 +44,30 @@ const FeaturesPage = () => {
 
   return (
     <div className="features-page">
-      <h1>Explore Our Features</h1>
-      <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
-        <TabList>
-          {Object.keys(features).map((category, index) => (
-            <Tab key={index}>{category}</Tab>
-          ))}
-        </TabList>
+      <div className="container">
+        <h1>Explore Our Features</h1>
+        <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
+          <TabList>
+            {Object.keys(features).map((category, index) => (
+              <Tab key={index}>{category}</Tab>
+            ))}
+          </TabList>
 
-        {Object.entries(features).map(([category, featureList], index) => (
-          <TabPanel key={index}>
-            <div className="features-list">
-              {featureList.map((feature, idx) => (
-                <div className="feature-card" key={idx}>
-                  <div className="feature-icon">{feature.icon}</div>
-                  <h2>{feature.title}</h2>
-                  <p>{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </TabPanel>
-        ))}
-      </Tabs>
+          {Object.entries(features).map(([category, featureList], index) => (
+            <TabPanel key={index}>
+              <div className="features-list">
+                {featureList.map((feature, idx) => (
+                  <div className="feature-card" key={idx}>
+                    <div className="feature-icon">{feature.icon}</div>
+                    <h2>{feature.title}</h2>
+                    <p>{feature.description}</p>
+                  </div>
+                ))}
+              </div>
+            </TabPanel>
+          ))}
+        </Tabs>
+      </div>
     </div>
   );
 };
