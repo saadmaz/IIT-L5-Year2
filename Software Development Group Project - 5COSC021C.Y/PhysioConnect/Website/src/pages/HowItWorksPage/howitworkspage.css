@@ -38,9 +38,11 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   /* Enforce 3 columns */
-  gap: 4rem;
-  /* Increased gap to prevent merging */
+  gap: 3rem;
+  /* Balanced gap */
   width: 100%;
+  max-width: 1200px;
+  /* Constrain overall width */
   justify-items: center;
   padding: 1rem;
   box-sizing: border-box;
@@ -55,8 +57,8 @@
   border-radius: 15px;
   padding: 2.5rem 2rem;
   width: 100%;
-  max-width: 350px;
-  /* Constrain width to keep cards distinct */
+  max-width: 300px;
+  /* Smaller max-width ensures spacing around cards */
   margin: 0 auto;
   /* Center in grid cell */
   text-align: center;
