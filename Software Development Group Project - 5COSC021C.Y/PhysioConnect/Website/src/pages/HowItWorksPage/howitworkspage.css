@@ -157,10 +157,11 @@
   }
 
   .steps-list {
-    grid-template-columns: 1fr;
-    /* 1 column on mobile */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 4rem;
-    /* Increased vertical gap for mobile */
+    /* Guaranteed vertical gap */
     width: 100%;
   }
 
