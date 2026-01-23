@@ -38,8 +38,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   /* Enforce 3 columns */
-  gap: 3rem;
-  /* Balanced gap */
+  gap: 6rem 3rem;
+  /* Increased vertical gap significantly */
   width: 100%;
   max-width: 1200px;
   /* Constrain overall width */
