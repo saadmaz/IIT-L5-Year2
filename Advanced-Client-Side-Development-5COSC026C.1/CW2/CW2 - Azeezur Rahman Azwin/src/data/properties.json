@@ -1,0 +1,140 @@
+{
+  "properties": [
+    {
+      "id": "prop1",
+      "type": "house",
+      "bedrooms": 3,
+      "price": 750000,
+      "tenure": "Freehold",
+      "description": "Attractive three-bedroom semi-detached family home situated within 0.5 miles of Petts Wood station with fast trains to London and within easy walking distance of local shops, schools, bus routes, and National Trust woodland.",
+      "location": "Petts Wood Road, Petts Wood, Orpington BR5",
+      "picture": "/pic/pro1/",
+      "url": "properties/prop1.html",
+      "added": {
+        "month": "October",
+        "day": 12,
+        "year": 2022
+      },
+      "postcode": 11350
+    },
+    {
+      "id": "prop2",
+      "type": "flat",
+      "bedrooms": 2,
+      "price": 399995,
+      "tenure": "Freehold",
+      "description": "Presented in excellent decorative order throughout is this two double-bedroom, two-bathroom, garden flat. The modern fitted kitchen is open plan to the living room with bi-folding doors onto a secluded private courtyard garden.",
+      "location": "Crofton Road Orpington BR6",
+      "picture": "/pic/pro2/",
+      "url": "properties/prop2.html",
+      "added": {
+        "month": "September",
+        "day": 14,
+        "year": 2022
+      },
+      "postcode": 11359
+    },
+    {
+      "id": "prop3",
+      "type": "house",
+      "bedrooms": 4,
+      "price": 1200000,
+      "tenure": "Leasehold",
+      "description": "A beautiful four-bedroom detached house in a quiet cul-de-sac, featuring a large garden, modern kitchen, and spacious living room. Ideal for families seeking a peaceful neighborhood.",
+      "location": "Maple Avenue, Beckenham, Kent BR3",
+      "picture": "/pic/pro3/",
+      "url": "properties/prop3.html",
+      "added": {
+        "month": "August",
+        "day": 25,
+        "year": 2023
+      },
+      "postcode": 11361
+    },
+    {
+      "id": "prop4",
+      "type": "flat",
+      "bedrooms": 1,
+      "price": 250000,
+      "tenure": "Freehold",
+      "description": "Modern one-bedroom apartment located in the heart of Bromley, with excellent transport links and walking distance to the high street. Ideal for first-time buyers or investors.",
+      "location": "High Street, Bromley, Kent BR1",
+      "picture": "/pic/pro4/",
+      "url": "properties/prop4.html",
+      "added": {
+        "month": "July",
+        "day": 10,
+        "year": 2023
+      },
+      "postcode": 11352
+    },
+    {
+      "id": "prop5",
+      "type": "house",
+      "bedrooms": 3,
+      "price": 670000,
+      "tenure": "Freehold",
+      "description": "Charming three-bedroom bungalow with a spacious open-plan layout, private driveway, and large garden. Located close to amenities and public transport links.",
+      "location": "Elm Road, West Wickham, Kent BR4",
+      "picture": "/pic/pro5/",
+      "url": "properties/prop5.html",
+      "added": {
+        "month": "June",
+        "day": 5,
+        "year": 2023
+      },
+      "postcode": 11363
+    },
+    {
+      "id": "prop6",
+      "type": "flat",
+      "bedrooms": 2,
+      "price": 450000,
+      "tenure": "Leasehold",
+      "description": "Bright and airy two-bedroom flat with a balcony overlooking beautiful gardens. Features include modern fittings, allocated parking, and secure entry.",
+      "location": "Park Lane, Hayes, Kent BR2",
+      "picture": "/pic/pro6/",
+      "url": "properties/prop6.html",
+      "added": {
+        "month": "May",
+        "day": 18,
+        "year": 2023
+      },
+      "postcode": 11351
+    },
+    {
+      "id": "prop7",
+      "type": "house",
+      "bedrooms": 6,
+      "price": 850000,
+      "tenure": "Freehold",
+      "description": "Spacious four-bedroom townhouse with a garage and private garden, located in a sought-after residential area. Ideal for families looking for comfort and convenience.",
+      "location": "Cedar Road, Chislehurst, Kent BR7",
+      "picture": "/pic/pro7/",
+      "url": "properties/prop7.html",
+      "added": {
+        "month": "April",
+        "day": 22,
+        "year": 2023
+      },
+      "postcode": 11365
+    },
+    {
+      "id": "prop8",
+      "type": "house",
+      "bedrooms": 3,
+      "price": 180000,
+      "tenure": "Leasehold",
+      "description": "Compact and modern studio apartment in central Orpington. Perfect for professionals or as a buy-to-let investment.",
+      "location": "Station Road, Orpington, Kent BR6",
+      "picture": "/pic/pro8/",
+      "url": "properties/prop8.html",
+      "added": {
+        "month": "March",
+        "day": 15,
+        "year": 2023
+      },
+      "postcode": 11366
+    }
+  ]
+}

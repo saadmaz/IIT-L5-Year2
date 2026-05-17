@@ -1,0 +1,24 @@
+import { Building2 } from 'lucide-react';
+
+const Navbar = () => {
+  return (
+    <nav className="bg-white shadow-md">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16">
+          <div className="flex items-center">
+            <Building2 className="h-8 w-8 text-yellow-700" />
+            <span className="ml-2 text-xl font-bold text-gray-900">DreamHome</span>
+          </div>
+          <div className="flex items-center space-x-4">
+            <a href="#" className="text-gray-600 hover:text-yellow-700">Buy</a>
+            <a href="#" className="text-gray-600 hover:text-yellow-700">Rent</a>
+            <a href="#" className="text-gray-600 hover:text-yellow-700">Sell</a>
+            <a href="#" className="text-gray-600 hover:text-yellow-700">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
