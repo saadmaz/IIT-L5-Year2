@@ -1,0 +1,20 @@
+# Root .gitignore for IIT-L5-Year2
+
+# Ignore nested coursework student folders (their own repositories)
+Advanced-Client-Side-Development-5COSC026C.1/CW2/CW2 - Azeezur Rahman Azwin/
+Advanced-Client-Side-Development-5COSC026C.1/CW2/CW2 - Juzail Zabrin/
+Advanced-Client-Side-Development-5COSC026C.1/CW2/CW2 - Saad Mazhar/
+
+# Ignore build outputs
+**/target/
+**/bin/
+**/*.class
+
+# IDE/editor files
+.vscode/
+.idea/
+*.iml
+
+# OS files
+Thumbs.db
+.DS_Store
