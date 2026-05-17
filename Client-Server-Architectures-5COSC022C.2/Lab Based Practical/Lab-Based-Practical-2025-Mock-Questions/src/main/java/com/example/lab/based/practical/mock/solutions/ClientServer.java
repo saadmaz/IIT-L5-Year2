@@ -341,7 +341,3 @@ package com.example.lab.based.practical.mock.solutions;
                      * Please check if the user typed "exit". If so, exit the loop.
                      * ----------------
                     */
-                    
-
-                
-import 
