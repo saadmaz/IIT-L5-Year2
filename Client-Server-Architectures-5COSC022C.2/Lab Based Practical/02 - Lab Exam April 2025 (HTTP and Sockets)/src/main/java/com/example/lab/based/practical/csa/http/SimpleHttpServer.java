@@ -14,22 +14,23 @@ TOTAL MARK = 45
 ----------------------------------------------
 (3 marks)
 Import necessary classes:
-- HttpServer: The core class for creating an HTTP server. - Done 
-- HttpExchange: Represents a single HTTP request/response exchange. - 
+- HttpServer: The core class for creating an HTTP server.
+- HttpExchange: Represents a single HTTP request/response exchange.
 - HttpHandler: Interface for handling HTTP requests.
-- InetSocketAddress: Represents a socket address (IP address and port number). - DONE
-- IOException: For handling I/O exceptions. - DONE 
-- OutputStream: For writing the response body. - DONE
+- InetSocketAddress: Represents a socket address (IP address and port number).
+- IOException: For handling I/O exceptions.
+- OutputStream: For writing the response body.
 - URI: represents an Uniform Resource Identifier (URI) reference
 -----------------------------------------------
 */
 
-import com.sun.net.httpserver.HttpExchange; //for creating an HTTP Server 
+import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
-import java.net.InetSocketAddress; // Representing Socket Addresses 
-import java.io.IOException; //Handling IO exceptions 
-import java.io.OutputStream; //Writing the response body 
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.InetSocketAddress;
+import java.net.URI;
 
 /*
 ----------------------------------------------
@@ -39,17 +40,14 @@ Define a class named SimpleHttpServer.
 */
 public class SimpleHttpServer {
 
-
-}
     /*
     ----------------------------------------------
     (1 mark)
     Define the main method.
     -----------------------------------------------
     */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        
         /*
         ----------------------------------------------
         (3 mark)
@@ -59,9 +57,7 @@ public class SimpleHttpServer {
         - 0 is the backlog, representing the maximum number of queued incoming connections.  0 uses a system default.
         -----------------------------------------------
         */
-        try {
-            HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
-        
+        HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
 
         /*
         ----------------------------------------------
@@ -73,16 +69,16 @@ public class SimpleHttpServer {
         -----------------------------------------------
         */
         server.createContext("/hello", new MyHandler());
-        
+
         /*
         ----------------------------------------------
         (1 mark)
         Sets executor to the default value.
         If the executor is null, a default implementation is used.
-        -----------------------------------------------  
+        -----------------------------------------------
         */
         server.setExecutor(null);
-             
+
         /*
         ----------------------------------------------
         (1 mark)
@@ -91,11 +87,6 @@ public class SimpleHttpServer {
         */
         server.start();
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-        
         /*
         ----------------------------------------------
         (1 mark)
@@ -103,16 +94,17 @@ public class SimpleHttpServer {
         -----------------------------------------------
         */
         System.out.println("Server is up and running!");
-           
+    }
+
     /*
     ----------------------------------------------
     (2 mark)
     Define a static inner class named MyHandler that implements the HttpHandler interface.
     Please do not use public keyword. This class must be implemented outside of the main method
-    ----------------------------------------------- 
+    -----------------------------------------------
     */
     static class MyHandler implements HttpHandler {
-    
+
         /*
         ----------------------------------------------
         (2 marks)
@@ -123,26 +115,21 @@ public class SimpleHttpServer {
         @Override
         public void handle(HttpExchange exchange) throws IOException {
 
-/*
+            /*
             ----------------------------------------------
             (2 marks)
             Gets request method from client by invoking getRequestMethod and store it inside a string variable called requestMethod
             -----------------------------------------------
             */
-            String method = exchange.getRequestMethod();
-            String path = exchange.getRequestURI().getPath();
-
+            String requestMethod = exchange.getRequestMethod();
 
             /*
             ----------------------------------------------
             (2 marks)
-            Checks if request method equals GET methods 
+            Checks if request method equals GET methods
             -----------------------------------------------
             */
-            if (!"/hello".equals(path)) {
-                sendResponse(exchange, "Not Found", 404);
-                return;
-            }
+            if ("GET".equals(requestMethod)) {
 
                 /*
                 ----------------------------------------------
@@ -150,19 +137,15 @@ public class SimpleHttpServer {
                 Get the request URI of the request by invoking getRequestURI and store it inside an object of the URI named requestURI.
                 -----------------------------------------------
                 */
-                
-                
-
+                URI requestURI = exchange.getRequestURI();
 
                 /*
                 ----------------------------------------------
                 (2 mark)
-                Print the requestURI to the console. 
-                -----------------------------------------------        
+                Print the requestURI to the console.
+                -----------------------------------------------
                 */
-                
-                
-
+                System.out.println(requestURI);
 
                 /*
                 ----------------------------------------------
@@ -170,9 +153,7 @@ public class SimpleHttpServer {
                 provide the response message like "Hello" plus requestURI and store them inside a string variable named response.
                 -----------------------------------------------
                 */
-                
-                
-
+                String response = "Hello " + requestURI;
 
                 /*
                 ----------------------------------------------
@@ -182,19 +163,15 @@ public class SimpleHttpServer {
                 - converts the response to bytes and get the length of the response.
                 -----------------------------------------------
                 */
-                String response = "This is a POST request to /hello";
-                sendResponse(exchange, response, 200);
-            }
-                
+                exchange.sendResponseHeaders(200, response.getBytes().length);
+
                 /*
                 ----------------------------------------------
                 (2 mark)
-                Get the response body by invoking getResponseBody method and store it inside the object of OutputStream named os. 
+                Get the response body by invoking getResponseBody method and store it inside the object of OutputStream named os.
                 -----------------------------------------------
                 */
-                
-                
-
+                OutputStream os = exchange.getResponseBody();
 
                 /*
                 ----------------------------------------------
@@ -202,9 +179,7 @@ public class SimpleHttpServer {
                 Write the response string to the OutputStream and convert it to bytes.
                 -----------------------------------------------
                 */
-                
-                
-
+                os.write(response.getBytes());
 
                 /*
                 ----------------------------------------------
@@ -212,9 +187,8 @@ public class SimpleHttpServer {
                 Close the OutputStream.  This is essential to send the response to the client.
                 -----------------------------------------------
                 */
-                
-                
-
+                os.close();
+            }
 
             /*
             ----------------------------------------------
@@ -223,10 +197,6 @@ public class SimpleHttpServer {
             -----------------------------------------------
             */
             else {
-                sendResponse(exchange, "Method not supported", 400);
-            }
-        }
-
 
                 /*
                 ----------------------------------------------
@@ -234,17 +204,15 @@ public class SimpleHttpServer {
                 create a message like "method not allowed" and store it in a string variable named response
                 -----------------------------------------------
                 */
-                
-                
-
+                String response = "Method not allowed";
 
                 /*
                 ----------------------------------------------
                 (2 marks)
                 Sets response header by invoking sendResponseHeaders using the HttpExchange and pass the arguments (405 and the length of the response by converting it to bytes).
-                -----------------------------------------------                
+                -----------------------------------------------
                 */
-                exchange.sendResponseHeaders(statusCode, response.getBytes().length);
+                exchange.sendResponseHeaders(405, response.getBytes().length);
 
                 /*
                 ----------------------------------------------
@@ -252,28 +220,23 @@ public class SimpleHttpServer {
                 Get the response body using exchange object and store it inside OutputStream object named os to write the response data.
                 -----------------------------------------------
                 */
-                
-               
+                OutputStream os = exchange.getResponseBody();
 
-                
                 /*
                 ----------------------------------------------
-                (2 mark) 
+                (2 mark)
                 Write the response string to the OutputStream to be returned to the client and convert it to bytes.
                 -----------------------------------------------
                 */
-                
-               
+                os.write(response.getBytes());
 
-                
-                /*           
+                /*
                 ----------------------------------------------
                 (1 mark)
                 Close the OutputStream to send the response to the client.
                 -----------------------------------------------
                 */
-                try (OutputStream os = exchange.getResponseBody()) {
-                os.write(response.getBytes());
+                os.close();
             }
         }
     }

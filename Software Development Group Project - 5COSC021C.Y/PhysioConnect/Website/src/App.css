@@ -18,7 +18,6 @@ html {
 /* Features Section */
 .features {
   padding: 100px 20px;
-  background-image: url('../assets/features-bg.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -26,7 +25,6 @@ html {
 /* About Us */
 .about {
   padding: 100px 20px;
-  background-image: url('../assets/about-bg.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -34,7 +32,6 @@ html {
 /* How It Works */
 .how-it-works {
   padding: 100px 20px;
-  background-image: url('../assets/how-it-works-bg.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -42,7 +39,6 @@ html {
 /* Contact Section */
 .contact {
   padding: 100px 20px;
-  background-image: url('../assets/contact-bg.jpg');
   background-size: cover;
   background-position: center;
 }

@@ -4,9 +4,6 @@
  */
 package com.mycompany.hotelmanagementsystem;
 
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
-
 /**
  *
  * @author b.villarini
@@ -31,12 +28,4 @@ public class Manager extends HotelStaff {
     public String toString() {
         return super.toString() + " Manager - License number: " + licenseNumber;
     }
-}
-
-
-@Test
-public void testConstructor() {
-    Manager manager = new Manager("Saad", "Mazhar");
-    assertEquals("Saad", manager.getName());
-    assertEquals("Mazhar", manager.getSurname());
 }

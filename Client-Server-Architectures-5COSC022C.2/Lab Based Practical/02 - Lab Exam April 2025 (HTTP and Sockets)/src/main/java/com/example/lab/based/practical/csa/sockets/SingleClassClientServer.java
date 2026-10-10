@@ -17,22 +17,24 @@ TOTAL MARK = 40
 import necessary libraries
 -----------------------------------------------
 */
-import
-import
-import
-import
-
-        
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.Scanner;
+import java.util.logging.Logger;
 
 
 /*
 ----------------------------------------------
 (1 mark)
-Define a publicd class named SingleClassClientServer
+Define a public class named SingleClassClientServer
 -----------------------------------------------
 */
-Public class SingleClassClientServer { 
-    
+public class SingleClassClientServer {
+
     /*
     ----------------------------------------------
     (1 mark)
@@ -58,21 +60,16 @@ Public class SingleClassClientServer {
     It extends the Thread class, allowing the server to run concurrently with the client.
     -----------------------------------------------
     */
-    Thread serverThread = new Thread(new Server());
-        serverThread.start();
+    static class Server extends Thread {
 
         /*
         ----------------------------------------------
-       (1 mark)
+        (1 mark)
         Declare a private instance variable serverSocket of type ServerSocket. This will hold the server's socket.
         It's private because only the Server class needs to access it.
         -----------------------------------------------
         */
-        private final Socket SingleClassClientServer;
-
-            public ClientHandler(Socket SingleClassClientServer) {
-                this.SingleClassClientServer = SingleClassClientServer;
-            }
+        private ServerSocket serverSocket;
 
         /*
         ----------------------------------------------
@@ -91,8 +88,7 @@ Public class SingleClassClientServer {
             (e.g., if the port is already in use).
             -----------------------------------------------
             */
-            
-
+            try {
 
                 /*
                 ----------------------------------------------
@@ -101,8 +97,7 @@ Public class SingleClassClientServer {
                 for incoming client connections on that port.
                 -----------------------------------------------
                 */
-                try (ServerSocket serverSocket = new ServerSocket(PORT)) {
-                    logger.info("Server started on port " + PORT);
+                serverSocket = new ServerSocket(PORT);
 
                 /*
                 ----------------------------------------------
@@ -111,16 +106,15 @@ Public class SingleClassClientServer {
                 listening on the specified port.
                 -----------------------------------------------
                 */
-                logger.info("Server started on port " + PORT);
+                System.out.println("Server is listening on port " + PORT);
 
-                 /*
+                /*
                 ----------------------------------------------
                 (1 mark)
                 log an informational log and provide a message like Server started on port 8000
                 -----------------------------------------------
                 */
-                
-
+                logger.info("Server started on port " + PORT);
 
                 /*
                 ----------------------------------------------
@@ -129,7 +123,7 @@ Public class SingleClassClientServer {
                 client connections within this loop.
                 -----------------------------------------------
                 */
-                
+                while (true) {
 
                     /*
                     ----------------------------------------------
@@ -139,8 +133,7 @@ Public class SingleClassClientServer {
                     object representing the connection to that client.
                     -----------------------------------------------
                     */
-                    
-
+                    Socket clientSocket = serverSocket.accept();
 
                     /*
                     ----------------------------------------------
@@ -149,11 +142,8 @@ Public class SingleClassClientServer {
                     getInetAddress() retrieves the IP address of the connected client.
                     -----------------------------------------------
                     */
-                   
+                    System.out.println("Client connected: " + clientSocket.getInetAddress());
 
-
-
-                   
                     /*
                     ----------------------------------------------
                     (3 marks)
@@ -162,8 +152,21 @@ Public class SingleClassClientServer {
                     meaning data is sent immediately without needing to call out.flush().
                     -----------------------------------------------
                     */
-                    
-                    
+                    try (Socket socket = clientSocket;
+                         PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+                         BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
+
+                        out.println("Hello from the server!");
+
+                        // Echo every line the client sends until it disconnects
+                        String line;
+                        while ((line = in.readLine()) != null) {
+                            out.println("Server received: " + line);
+                        }
+                    }
+                }
+
+            } catch (IOException e) {
 
                 /*
                 ----------------------------------------------
@@ -172,8 +175,7 @@ Public class SingleClassClientServer {
                 e.getMessage() provides a description of the error.
                 -----------------------------------------------
                 */
-                
-
+                System.err.println("Server error: " + e.getMessage());
 
                 /*
                 ----------------------------------------------
@@ -182,9 +184,10 @@ Public class SingleClassClientServer {
                 the error occurred, which is helpful for debugging.
                 -----------------------------------------------
                 */
-                
-
-
+                e.printStackTrace();
+            }
+        }
+    }
 
     /*
     ----------------------------------------------
@@ -193,9 +196,9 @@ Public class SingleClassClientServer {
     concurrently with the server.
     -----------------------------------------------
     */
-    static class Client implements Runnable {
+    static class Client extends Thread {
 
-         /*
+        /*
         ----------------------------------------------
         (1 mark)
         Override the run() method from the Thread class.  This method contains the code that will be
@@ -205,33 +208,36 @@ Public class SingleClassClientServer {
         @Override
         public void run() {
 
-             /*
+            /*
             ----------------------------------------------
             (1 mark)
             Use a try-with-resources statement to automatically close the Socket, PrintWriter,
             BufferedReader, and Scanner.
             -----------------------------------------------
             */
-            try { 
-            
+            try (
                  /*
-                ----------------------------------------------
-                (3 marks)
-                Create a new Socket and connect it to the server running on "localhost" (the same machine)
-                at the specified PORT.  This establishes a connection to the server.
-                -----------------------------------------------
-                */
-                Socket socket = new Socket("localhost", PORT);
-                
-                /*
-                ----------------------------------------------
-                (4 marks)
-                Create a BufferedReader to read data (text) from the client.
-                socket.getInputStream() gets the input stream of the client's socket.
-                An InputStreamReader wraps the byte-based input stream to convert it to a character-based stream.
-                -----------------------------------------------
-                */
-                BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                 ----------------------------------------------
+                 (3 marks)
+                 Create a new Socket and connect it to the server running on "localhost" (the same machine)
+                 at the specified PORT.  This establishes a connection to the server.
+                 -----------------------------------------------
+                 */
+                 Socket socket = new Socket("localhost", PORT);
+
+                 PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+
+                 /*
+                 ----------------------------------------------
+                 (4 marks)
+                 Create a BufferedReader to read data (text) from the client.
+                 socket.getInputStream() gets the input stream of the client's socket.
+                 An InputStreamReader wraps the byte-based input stream to convert it to a character-based stream.
+                 -----------------------------------------------
+                 */
+                 BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+
+                 Scanner scanner = new Scanner(System.in)) {
 
                 /*
                 ----------------------------------------------
@@ -239,17 +245,28 @@ Public class SingleClassClientServer {
                 Print a message to the console indicating that the client has started and connected to the server.
                 -----------------------------------------------
                 */
-                PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-                
+                System.out.println("Client started and connected to the server");
+
+                System.out.println(in.readLine());
+
+                // Send each line typed by the user and print the server's reply
+                while (scanner.hasNextLine()) {
+                    out.println(scanner.nextLine());
+                    System.out.println(in.readLine());
+                }
+
+            } catch (IOException e) {
+
                 /*
                 ----------------------------------------------
                 (1 mark)
                 Print an error message to the console if an IOException occurs.
                 -----------------------------------------------
                 */
-              
-
-
+                System.err.println("Client error: " + e.getMessage());
+            }
+        }
+    }
 
     /*
     ----------------------------------------------
@@ -257,7 +274,7 @@ Public class SingleClassClientServer {
     Define the main method.  This is the entry point of the program.
     -----------------------------------------------
     */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         /*
         ----------------------------------------------
@@ -265,7 +282,7 @@ Public class SingleClassClientServer {
         Create a new object of the Server class and name it as server.
         -----------------------------------------------
         */
-
+        Server server = new Server();
 
         /*
         ----------------------------------------------
@@ -273,17 +290,19 @@ Public class SingleClassClientServer {
         Create a new instance of the Client class and call it as client.
         -----------------------------------------------
         */
-        
+        Client client = new Client();
 
         /*
         ----------------------------------------------
         (1 mark)
-        Start the server thread by calling .
+        Start the server thread by calling start().
         -----------------------------------------------
         */
-        
+        server.start();
 
-        
+        // Give the server a moment to bind the port before the client connects
+        Thread.sleep(500);
+
         /*
         ----------------------------------------------
         (1 mark)
@@ -291,8 +310,6 @@ Public class SingleClassClientServer {
         to be executed in a separate thread.
         -----------------------------------------------
         */
-
-            }
-        }
+        client.start();
     }
 }

@@ -1,7 +1,5 @@
 package com.mycompany.hotelmanagementsystem;
 
-import static java.lang.Character.getName;
-
 public class Chef extends HotelStaff {
     private int yearsOfExperience;
     private String speciality;
@@ -38,12 +36,4 @@ public class Chef extends HotelStaff {
                 '}';
     }
 
-    public String getStaffID() {
-    }
-
-    private String getDateOfBirth() {
-    }
-
-    private String getSurname() {
-    }
 }

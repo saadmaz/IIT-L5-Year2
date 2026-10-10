@@ -218,29 +218,16 @@ const PropertyPage = () => {
                 </p>
                 {/* Google Maps Embed */}
                 <div className="aspect-video rounded-lg overflow-hidden border-2 border-orange-200">
-                  {property.googleMapsUrl ? (
-                    <iframe
-                      src={property.googleMapsUrl.replace('maps.app.goo.gl', 'www.google.com/maps/embed?pb=')}
-                      width="100%"
-                      height="100%"
-                      style={{ border: 0 }}
-                      allowFullScreen={true}
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                      title="Google Map"
-                    />
-                  ) : (
-                    <iframe
-                      src={`https://www.google.com/maps?q=${encodeURIComponent(property.location)}&output=embed`}
-                      width="100%"
-                      height="100%"
-                      style={{ border: 0 }}
-                      allowFullScreen={true}
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                      title="Google Map"
-                    />
-                  )}
+                  <iframe
+                    src={`https://www.google.com/maps?q=${encodeURIComponent(property.location)}&output=embed`}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen={true}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Google Map"
+                  />
                 </div>
 
                 {/* Link to Google Maps */}

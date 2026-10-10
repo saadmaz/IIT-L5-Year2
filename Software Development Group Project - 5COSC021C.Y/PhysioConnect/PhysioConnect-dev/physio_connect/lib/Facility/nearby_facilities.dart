@@ -131,7 +131,8 @@ class _NearbyFacilitiesScreenState extends State<NearbyFacilitiesScreen>
       String type,
       Set<Marker> markerSet,
       ) async {
-    const apiKey = "AIzaSyAUiLi358QxvTGF8oKIkZ43kcHMsiTQ2YE";
+    // Supply at build/run time: flutter run --dart-define=GOOGLE_PLACES_API_KEY=your_key
+    const apiKey = String.fromEnvironment('GOOGLE_PLACES_API_KEY');
     const radius = 49000; // 49 km
 
     String nextPageToken = '';

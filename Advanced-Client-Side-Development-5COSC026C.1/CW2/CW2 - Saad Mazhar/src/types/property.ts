@@ -13,6 +13,7 @@ export interface Property {
   url: string;
   tenure: 'Freehold' | 'Leasehold';
   images: string[];
+  googleMapsUrl?: string;
 }
 
 // Search filters for property filtering functionality
