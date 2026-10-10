@@ -1,0 +1,10 @@
+# .gitignore
+node_modules/
+.env
+uploads/*
+!uploads/profiles/
+!uploads/documents/
+uploads/profiles/*
+uploads/documents/*
+!uploads/profiles/.gitkeep
+!uploads/documents/.gitkeep
