@@ -1,30 +1,33 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.saad.restful_bookstore_api.model;
 
-/**
- *
- * @author saadm
- */
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ * A book in the store. Wrapper types are used so a field missing from the JSON
+ * arrives as null and can be rejected, instead of silently becoming 0.
+ *
+ * @author saadm
+ */
 @XmlRootElement
 public class Book {
     private Long id;
     private String title;
     private Long authorId;
     private String isbn;
-    private int publicationYear;
-    private double price;
-    private int stock;
-    
+    private Integer publicationYear;
+    private Double price;
+    private Integer stock;
+
+    // Filled in by BookResource on the way out; ignored if a client sends it
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+    private Author author;
+
     public Book() {
     }
-    
-    public Book(Long id, String title, Long authorId, String isbn, int publicationYear, double price, int stock) {
+
+    public Book(Long id, String title, Long authorId, String isbn, Integer publicationYear, Double price, Integer stock) {
         this.id = id;
         this.title = title;
         this.authorId = authorId;
@@ -33,61 +36,68 @@ public class Book {
         this.price = price;
         this.stock = stock;
     }
-    
-    // Getters and setters
+
     public Long getId() {
         return id;
     }
-    
+
     public void setId(Long id) {
         this.id = id;
     }
-    
+
     public String getTitle() {
         return title;
     }
-    
+
     public void setTitle(String title) {
         this.title = title;
     }
-    
+
     public Long getAuthorId() {
         return authorId;
     }
-    
+
     public void setAuthorId(Long authorId) {
         this.authorId = authorId;
     }
-    
+
     public String getIsbn() {
         return isbn;
     }
-    
+
     public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
-    
-    public int getPublicationYear() {
+
+    public Integer getPublicationYear() {
         return publicationYear;
     }
-    
-    public void setPublicationYear(int publicationYear) {
+
+    public void setPublicationYear(Integer publicationYear) {
         this.publicationYear = publicationYear;
     }
-    
-    public double getPrice() {
+
+    public Double getPrice() {
         return price;
     }
-    
-    public void setPrice(double price) {
+
+    public void setPrice(Double price) {
         this.price = price;
     }
-    
-    public int getStock() {
+
+    public Integer getStock() {
         return stock;
     }
-    
-    public void setStock(int stock) {
+
+    public void setStock(Integer stock) {
         this.stock = stock;
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
     }
 }

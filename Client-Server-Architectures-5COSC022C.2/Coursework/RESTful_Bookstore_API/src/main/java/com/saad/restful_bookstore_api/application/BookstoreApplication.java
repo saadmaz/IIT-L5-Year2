@@ -1,13 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.saad.restful_bookstore_api.application;
-
-/**
- *
- * @author saadm
- */
 
 import com.saad.restful_bookstore_api.exception.mappers.*;
 import com.saad.restful_bookstore_api.resource.*;
@@ -16,6 +7,9 @@ import javax.ws.rs.core.Application;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * @author saadm
+ */
 @ApplicationPath("/api")
 public class BookstoreApplication extends Application {
     @Override
@@ -36,6 +30,7 @@ public class BookstoreApplication extends Application {
         classes.add(InvalidInputExceptionMapper.class);
         classes.add(OutOfStockExceptionMapper.class);
         classes.add(CartNotFoundExceptionMapper.class);
+        classes.add(OrderNotFoundExceptionMapper.class);
         
         return classes;
     }

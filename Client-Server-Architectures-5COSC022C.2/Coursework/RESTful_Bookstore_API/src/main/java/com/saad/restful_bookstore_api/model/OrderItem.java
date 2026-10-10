@@ -1,53 +1,49 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.saad.restful_bookstore_api.model;
-
-/**
- *
- * @author saadm
- */
 
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ * One line of an order. The price is copied from the book when the order is placed,
+ * so later price changes do not alter past orders.
+ *
+ * @author saadm
+ */
 @XmlRootElement
 public class OrderItem {
     private Long bookId;
-    private int quantity;
-    private double price;
-    
+    private Integer quantity;
+    private Double price;
+
     public OrderItem() {
     }
-    
-    public OrderItem(Long bookId, int quantity, double price) {
+
+    public OrderItem(Long bookId, Integer quantity, Double price) {
         this.bookId = bookId;
         this.quantity = quantity;
         this.price = price;
     }
-    
-    // Getters and setters
+
     public Long getBookId() {
         return bookId;
     }
-    
+
     public void setBookId(Long bookId) {
         this.bookId = bookId;
     }
-    
-    public int getQuantity() {
+
+    public Integer getQuantity() {
         return quantity;
     }
-    
-    public void setQuantity(int quantity) {
+
+    public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
-    
-    public double getPrice() {
+
+    public Double getPrice() {
         return price;
     }
-    
-    public void setPrice(double price) {
+
+    public void setPrice(Double price) {
         this.price = price;
     }
 }

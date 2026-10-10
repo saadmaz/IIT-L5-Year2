@@ -544,15 +544,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/customers/999/orders/1",
+							"raw": "{{base_url}}/customers/1/orders",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"customers",
-								"999",
-								"orders",
-								"1"
+								"1",
+								"orders"
 							]
 						}
 					},
@@ -563,6 +562,67 @@
 					"request": {
 						"method": "GET",
 						"header": [],
+						"url": {
+							"raw": "{{base_url}}/customers/1/orders/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"1",
+								"orders",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Order Status",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/customers/1/orders/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"1",
+								"orders",
+								"1"
+							]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": \"SHIPPED\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Order (restocks books)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{base_url}}/customers/1/orders/1",
 							"host": [
@@ -708,6 +768,459 @@
 				}
 			],
 			"description": "This folder contains specialized requests designed to test the error handling capabilities of the API. It includes intentionally problematic requests to verify that the API responds appropriately to various error conditions. Examples include:\n\n- Requests for non-existent resources to test 404 Not Found responses\n    \n- Requests with invalid data to test validation logic and 400 Bad Request responses\n    \n- Requests that would violate business rules (like ordering more books than are in stock) to test business logic validation\n    \n\nThese test cases are crucial for ensuring the API behaves correctly when encountering errors, providing appropriate status codes and informative error messages to clients."
+		},
+		{
+			"name": "Edge Case Tests",
+			"item": [
+				{
+					"name": "Book - Missing Publication Year (400)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/books",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"books"
+							]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"No Year\",\n    \"authorId\": 1,\n    \"isbn\": \"978-0-0000-0000-1\",\n    \"price\": 9.99,\n    \"stock\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Book - Future Publication Year (400)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/books",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"books"
+							]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Future\",\n    \"authorId\": 1,\n    \"isbn\": \"978-0-0000-0000-2\",\n    \"publicationYear\": 3000,\n    \"price\": 9.99,\n    \"stock\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Book - Unknown Author (404)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/books",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"books"
+							]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Orphan\",\n    \"authorId\": 999,\n    \"isbn\": \"978-0-0000-0000-3\",\n    \"publicationYear\": 2000,\n    \"price\": 9.99,\n    \"stock\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Book - Negative Stock (400)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/books",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"books"
+							]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Bad Stock\",\n    \"authorId\": 1,\n    \"isbn\": \"978-0-0000-0000-4\",\n    \"publicationYear\": 2000,\n    \"price\": 9.99,\n    \"stock\": -1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Author - Empty Name (400)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/authors",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"authors"
+							]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"\",\n    \"biography\": \"None\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Author - Delete Author With Books (400)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/authors/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"authors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Customer - Invalid Email (400)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/customers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers"
+							]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Bad Email\",\n    \"email\": \"not-an-email\",\n    \"password\": \"secret1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Customer - Not Found (404)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/customers/999",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"999"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cart - Missing Book ID (400)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/customers/1/cart/items",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"1",
+								"cart",
+								"items"
+							]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quantity\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cart - Zero Quantity (400)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/customers/1/cart/items",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"1",
+								"cart",
+								"items"
+							]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bookId\": 1,\n    \"quantity\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cart - Remove Book Not In Cart (404)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/customers/1/cart/items/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"1",
+								"cart",
+								"items",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cart - Empty Cart (404)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/customers/2/cart",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"2",
+								"cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order - No Cart (404)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/customers/2/orders",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"2",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order - Another Customer's Order (404)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/customers/2/orders/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"2",
+								"orders",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order - Invalid Status (400)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/customers/1/orders/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"1",
+								"orders",
+								"1"
+							]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": \"LOST\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	],
 	"event": [
