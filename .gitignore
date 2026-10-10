@@ -18,3 +18,9 @@ Advanced-Client-Side-Development-5COSC026C.1/CW2/CW2 - Saad Mazhar/
 # OS files
 Thumbs.db
 .DS_Store
+
+node_modules/
+.env
+.dart_tool/
+.gradle/
+build/

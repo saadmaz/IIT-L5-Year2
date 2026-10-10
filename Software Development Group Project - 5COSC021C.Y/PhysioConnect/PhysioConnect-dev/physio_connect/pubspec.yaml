@@ -1,0 +1,130 @@
+name: fe
+description: A physiotherapy application with pain monitoring and first aid tutorials.
+
+environment:
+  sdk: ">=3.6.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  flutter_native_splash: ^2.3.1
+  logger: ^2.0.2
+
+  # ✅ WebView for External Resources
+  youtube_player_flutter: ^9.1.1
+  flutter_inappwebview: ^6.1.5
+
+  # ✅ Date & Time Formatting
+  http: ^1.3.0
+  intl: ^0.20.2
+  flutter_dotenv: ^5.2.1
+
+  # ✅ State Management & Data Persistence
+  provider: ^6.1.2
+  shared_preferences: ^2.5.2
+
+  # ✅ UI Enhancements & Animations
+  lottie: ^3.3.1
+  flutter_animate: ^4.5.0
+  flare_flutter: ^3.0.2
+  confetti: ^0.8.0
+  vibration: ^3.1.3
+
+  # ✅ Multimedia & Notifications
+  flutter_local_notifications: ^19.0.0
+
+  # ✅ Gauges & Charts for Pain Tracking
+  syncfusion_flutter_gauges: ^29.1.33
+  syncfusion_flutter_charts: ^29.1.33
+
+  # ✅ App Styling & Fonts
+  google_fonts: ^6.1.0
+  flutter_svg: ^2.0.9
+  geolocator: ^13.0.3
+  google_maps_flutter: ^2.12.0
+  url_launcher: ^6.3.1
+  share_plus: ^10.1.4
+  camera: ^0.11.1
+  animations: ^2.0.11
+  video_player: ^2.9.5
+  flutter_webrtc: ^0.13.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+# ✅ Override safe transitive dependencies
+dependency_overrides:
+  async: ^2.13.0
+  fake_async: ^1.3.3
+  leak_tracker: ^10.0.9
+  vm_service: ^15.0.0
+  material_color_utilities: ^0.12.0
+  geolocator_android: ^5.0.1
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    # ✅ Animation JSON files
+    - lib/assets/animations/physio_animation.json
+    - lib/assets/animations/transition_effect.json
+    - lib/assets/animations/intro_loading.json
+    - lib/assets/animations/waves_background.json
+    - lib/assets/animations/glowing_effect.json
+    - lib/assets/animations/pulse_effect.json
+    - lib/assets/animations/pain_indicator.json
+    - lib/assets/animations/radar_scan.json
+
+    # ✅ Logos & static images
+    - lib/assets/images/app_logo.png
+
+    # ✅ Main body part images
+    - assets/body_parts/muscles_abdomen_lower_back_pelvis.avif
+    - assets/body_parts/muscles_arm_hand.avif
+    - assets/body_parts/muscles_chest_upper_back.avif
+    - assets/body_parts/muscles_leg_foot.avif
+    - assets/body_parts/muscles_head_neck.avif
+
+    # ✅ Existing images folder
+    - assets/images/
+
+    # ✅ Head and Neck muscles
+    - assets/body_parts/Head/muscles/1.avif
+    - assets/body_parts/Head/muscles/2.avif
+    - assets/body_parts/Head/muscles/3.avif
+    - assets/body_parts/Head/muscles/4.avif
+    - assets/body_parts/Head/muscles/5.avif
+    - assets/body_parts/Head/muscles/6.avif
+    - assets/body_parts/Head/muscles/7.avif
+    - assets/body_parts/Head/muscles/8.avif
+    - assets/body_parts/Head/muscles/9.avif
+    - assets/body_parts/Head/muscles/10.avif
+    - assets/body_parts/Head/muscles/11.avif
+    - assets/body_parts/Head/muscles/12.avif
+    - assets/body_parts/Head/muscles/13.avif
+    - assets/body_parts/Head/muscles/14.avif
+    - assets/body_parts/Head/muscles/15.avif
+    - assets/body_parts/Head/muscles/16.avif
+    - assets/body_parts/Head/muscles/17.avif
+    - assets/body_parts/Head/muscles/18.avif
+    - assets/body_parts/Head/muscles/19.avif
+    - assets/body_parts/Head/muscles/20.avif
+    - assets/body_parts/Head/muscles/21.avif
+    - assets/body_parts/Head/muscles/22.avif
+    - assets/body_parts/Head/muscles/23.avif
+
+    # ✅ Additional body part folders (recursive)
+    - assets/body_parts/Head/muscles/
+    - assets/body_parts/Chest and Upper Back/muscles/
+    - assets/body_parts/abdomen/muscles/
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat-Regular.ttf

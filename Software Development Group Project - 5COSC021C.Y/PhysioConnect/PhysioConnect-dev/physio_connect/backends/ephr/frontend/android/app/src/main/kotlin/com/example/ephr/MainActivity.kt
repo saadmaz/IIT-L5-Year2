@@ -1,0 +1,5 @@
+package com.example.ephr
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity : FlutterActivity()
