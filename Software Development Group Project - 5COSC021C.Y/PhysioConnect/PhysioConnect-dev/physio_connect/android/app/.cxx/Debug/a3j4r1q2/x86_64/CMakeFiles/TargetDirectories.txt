@@ -1,0 +1,2 @@
+/Users/sachiradelankawala/Desktop/pc/fe/android/app/.cxx/Debug/a3j4r1q2/x86_64/CMakeFiles/edit_cache.dir
+/Users/sachiradelankawala/Desktop/pc/fe/android/app/.cxx/Debug/a3j4r1q2/x86_64/CMakeFiles/rebuild_cache.dir
