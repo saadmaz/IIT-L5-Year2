@@ -1,14 +1,28 @@
 # Root .gitignore for IIT-L5-Year2
 
-# Ignore nested coursework student folders (their own repositories)
-Advanced-Client-Side-Development-5COSC026C.1/CW2/CW2 - Azeezur Rahman Azwin/
-Advanced-Client-Side-Development-5COSC026C.1/CW2/CW2 - Juzail Zabrin/
-Advanced-Client-Side-Development-5COSC026C.1/CW2/CW2 - Saad Mazhar/
-
-# Ignore build outputs
+# Build outputs
 **/target/
 **/bin/
 **/*.class
+build/
+.dart_tool/
+.gradle/
+dist/
+
+# Dependencies
+node_modules/
+
+# Secrets / local config
+.env
+.env.*
+!.env.example
+
+# Third-party server distributions (download separately)
+**/apache-tomcat-*/
+
+# Local editor tooling (VS Code Java upgrade / modernize extension logs)
+.github/java-upgrade/
+.github/modernize/
 
 # IDE/editor files
 .vscode/
@@ -18,9 +32,3 @@ Advanced-Client-Side-Development-5COSC026C.1/CW2/CW2 - Saad Mazhar/
 # OS files
 Thumbs.db
 .DS_Store
-
-node_modules/
-.env
-.dart_tool/
-.gradle/
-build/

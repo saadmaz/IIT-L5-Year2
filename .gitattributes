@@ -1,0 +1,18 @@
+# Keep GitHub's language stats focused on hand-written code.
+# Flutter platform runners are generated boilerplate (C++, CMake, Swift, Kotlin, ...).
+**/android/** linguist-generated
+**/ios/** linguist-generated
+**/linux/** linguist-generated
+**/macos/** linguist-generated
+**/windows/** linguist-generated
+**/web/index.html linguist-generated
+
+# Lock files
+**/package-lock.json linguist-generated
+**/pubspec.lock linguist-generated
+**/bun.lockb linguist-generated binary
+
+# Course PDFs / slides are documentation, not code
+*.pdf binary
+*.pptx binary
+*.docx binary
