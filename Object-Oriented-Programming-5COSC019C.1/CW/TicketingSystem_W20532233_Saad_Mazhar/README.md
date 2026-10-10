@@ -6,6 +6,7 @@ while customers buy them, using multiple threads.
 ```
 W2053223_TicketingSystem_CLI/       Working console app (plain Java, no build tool)
 W2053223_TicketingSystem_BackEnd/   Spring Boot + MongoDB project — set up, but no endpoints yet
+W2053223_TicketingSystem_FrontEnd/  React UI prototype (home, events, login, sign-up) — not yet connected to the back end
 ```
 
 ## CLI
@@ -39,4 +40,14 @@ The database connection string is read from the `MONGODB_URI` environment variab
 ```bash
 cd W2053223_TicketingSystem_BackEnd
 ./mvnw test
+```
+
+## Front end
+
+A React app with four pages. See its own README for details.
+
+```bash
+cd W2053223_TicketingSystem_FrontEnd
+npm install
+npm start          # http://localhost:3000
 ```
