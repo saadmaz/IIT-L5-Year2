@@ -1,5 +1,5 @@
 <?php
-// admin_products.php — Basic admin panel to list and edit products
+// admin_products.php: Basic admin panel to list and edit products
 include('db.php');
 include('headfile.html');
 

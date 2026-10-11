@@ -1,6 +1,6 @@
 <?php
 // db.php
-// Database connection file — include this on pages that need DB access.
+// Database connection file. Include this on pages that need DB access.
 
 // ---------- EDIT THESE VALUES ----------
 $host = "localhost";    // database host (usually localhost)
@@ -14,7 +14,7 @@ $conn = mysqli_connect($host, $user, $pass, $dbname);
 
 // Check for connection error and report it
 if (!$conn) {
-    // In production don't reveal sensitive details — just for the tutorial we show the error
+    // In production, don't reveal sensitive details. For the tutorial, we show the error
     die("Database connection failed: " . mysqli_connect_error());
 }
 

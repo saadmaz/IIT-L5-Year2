@@ -43,7 +43,7 @@ class PainMonitoringPageState extends State<PainMonitoringPage> {
     }
 
     final newEntry = {
-      'date': DateFormat('yyyy-MM-dd – kk:mm').format(DateTime.now()),
+      'date': DateFormat('yyyy-MM-dd - kk:mm').format(DateTime.now()),
       'painLevel': _painLevel,
       'painLocation': _painLocation,
     };

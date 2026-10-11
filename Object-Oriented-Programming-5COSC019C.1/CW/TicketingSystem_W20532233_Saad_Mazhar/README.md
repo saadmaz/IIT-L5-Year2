@@ -1,12 +1,12 @@
-# Ticketing System — Saad Mazhar (20221804 / W20532233)
+# Ticketing System: Saad Mazhar (20221804 / W20532233)
 
 Real-time event ticketing coursework (December 2024): vendors release tickets into a shared pool
 while customers buy them, using multiple threads.
 
 ```
 W2053223_TicketingSystem_CLI/       Working console app (plain Java, no build tool)
-W2053223_TicketingSystem_BackEnd/   Spring Boot + MongoDB project — set up, but no endpoints yet
-W2053223_TicketingSystem_FrontEnd/  React UI prototype (home, events, login, sign-up) — not yet connected to the back end
+W2053223_TicketingSystem_BackEnd/   Spring Boot + MongoDB project (set up, but no endpoints yet)
+W2053223_TicketingSystem_FrontEnd/  React UI prototype (home, events, login, sign-up), not yet connected to the back end
 ```
 
 ## CLI

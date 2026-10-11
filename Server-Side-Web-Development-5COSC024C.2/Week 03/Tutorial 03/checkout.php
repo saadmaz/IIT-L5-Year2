@@ -1,5 +1,5 @@
 <?php
-// checkout.php — Mock checkout page
+// checkout.php: Mock checkout page
 session_start();
 include('headfile.html');
 

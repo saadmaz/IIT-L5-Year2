@@ -1,6 +1,6 @@
 # Real-Time Event Ticketing System
 
-A producer–consumer simulation: vendor threads release tickets into a bounded, thread-safe
+A producer-consumer simulation: vendor threads release tickets into a bounded, thread-safe
 pool and customer threads buy them, until every ticket is sold or the user stops the system.
 It can be controlled from the console or through a REST API.
 
@@ -55,8 +55,8 @@ To run only the REST API, set `ticketing.cli.enabled=false` in `application.prop
 | Method | Path                  | Body                         |
 |--------|-----------------------|------------------------------|
 | POST   | `/api/tickets/start`  | `SystemConfiguration` JSON   |
-| POST   | `/api/tickets/stop`   | –                            |
-| GET    | `/api/tickets/status` | –                            |
+| POST   | `/api/tickets/stop`   | None                            |
+| GET    | `/api/tickets/status` | None                            |
 
 Example:
 

@@ -18,7 +18,7 @@ const HomePage = () => {
       </header>
       <main className="home-body">
         <h1>Experience the Best Events Near You</h1>
-        <h2>Find, Book, and Enjoy – It’s That Simple!</h2>
+        <h2>Find, Book, and Enjoy. It’s That Simple!</h2>
         <Link to="/events">
           <button className="explore-button">Explore the Events</button>
         </Link>

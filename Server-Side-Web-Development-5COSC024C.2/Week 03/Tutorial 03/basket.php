@@ -3,11 +3,11 @@
 // Processes the posted quantity and product id from prodbuy.php and stores the selection in the PHP session
 
 session_start(); // we will use session to hold basket data
-include('db.php'); // optional — may be needed if you want to validate product id against DB
+include('db.php'); // optional: may be needed if you want to validate product id against DB
 
 // Defensive checks for expected POST values
 if (!isset($_POST['h_prodid']) || !isset($_POST['p_quantity'])) {
-    // malformed request — redirect back to index
+    // malformed request: redirect back to index
     header('Location: index.php');
     exit();
 }
@@ -28,7 +28,7 @@ $res = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 if ($row = mysqli_fetch_assoc($res)) {
     $available = (int)$row['prodQuantity'];
     if ($quantity > $available) {
-        // requested more than available — reduce to max available
+        // requested more than available: reduce to max available
         $quantity = $available;
     }
 
@@ -54,7 +54,7 @@ if ($row = mysqli_fetch_assoc($res)) {
     header('Location: basketview.php');
     exit();
 } else {
-    // Product doesn't exist — go back
+    // Product doesn't exist: go back
     header('Location: index.php');
     exit();
 }

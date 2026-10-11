@@ -1,18 +1,18 @@
-# 5COSC026W – Advanced Client-side Web Development
+# 5COSC026W: Advanced Client-Side Web Development
 
 ## Final Coursework
 
-### Estate Agent Client-side Web Application
+### Estate Agent Client-Side Web Application
 
 ---
 
 ### 📌 Module Information
 
 * **Module Code:** 5COSC026W
-* **Module Title:** Advanced Client-side Web Development
+* **Module Title:** Advanced Client-Side Web Development
 * **Assessment:** Final Coursework
 * **Set Date:** 05th November 2024
-* **Submission Deadline:** 22nd December 2024 – 1:00 PM (Blackboard)
+* **Submission Deadline:** 22nd December 2024, 1:00 PM (Blackboard)
 * **Viva:** Date TBC
 
 ---
@@ -30,7 +30,7 @@ All data is stored and managed using **JSON files and browser local storage**, e
 
 ### 🔍 Property Search Functionality
 
-Users can search properties using any combination of the following criteria:
+Users can search for properties using any combination of the following criteria:
 
 * **Property Type:** House, Flat, Any
 * **Price Range:** Minimum and Maximum Price
@@ -38,8 +38,7 @@ Users can search properties using any combination of the following criteria:
 * **Date Added:** After a specific date or between two dates
 * **Postcode Area:** First part of the postcode (e.g., BR1, NW1)
 
-✔ The search works with **1 or more criteria simultaneously**
-✔ Results update dynamically on the client side
+✔ The search works with **one or more criteria at once**\n✔ Results update dynamically on the client side
 
 ---
 
@@ -110,7 +109,7 @@ Each property has its own **dedicated page** containing:
   * Type
   * Price
   * Location
-* **6–8 images per property**
+* **6-8 images per property**
 * Image viewing implemented using:
 
   * Custom code or
@@ -140,12 +139,12 @@ Users can manage favourite properties in multiple ways:
 
 ### Remove from Favourites
 
-* Drag property out of the favourites list
-* Click delete/remove button
+* Drag a property out of the favourites list
+* Click the delete/remove button
 
 ### Clear Favourites
 
-* Clear entire favourites list with a single action
+* Clear the entire favourites list with a single action
 
 ### Persistent Storage
 
@@ -194,7 +193,7 @@ The application follows strong visual design principles:
 
 ---
 
-## 🔐 Client-side Security
+## 🔐 Client-Side Security
 
 The application implements client-side security measures including:
 
@@ -223,7 +222,7 @@ Up to **10 marks may be deducted** for:
 
 ## 🧪 Viva Examination
 
-* Viva is **mandatory**
+* The viva is **mandatory**
 * Students must explain:
 
   * Code structure
@@ -232,7 +231,7 @@ Up to **10 marks may be deducted** for:
   * State management
   * Local storage usage
   * Security considerations
-* Failure to attend viva limits marks to **0–30%**
+* Failure to attend the viva limits marks to **0-30%**
 
 ---
 

@@ -3,7 +3,7 @@
 ## What is Object-Oriented Programming?
 
 - **OOP Definition:**  
-  A programming paradigm that uses "objects"—data structures consisting of fields (attributes) and methods (functions)—to design applications and programs.
+  A programming paradigm that uses "objects", which are data structures made up of fields (attributes) and methods (functions), to design applications and programs.
 - **Goal:**  
   To model real-world entities using code, making software easier to understand, reuse, and maintain.
 - **Real-Life Example:**  
@@ -59,7 +59,7 @@
 - **Definition:**  
   Creating new classes from existing ones, inheriting their attributes and behaviors.
 - **Benefit:**  
-  Promotes code reuse, reduces duplication.
+  Promotes code reuse and reduces duplication.
 - **Real-Life Example:**  
   A “Truck” class can inherit from a “Vehicle” class, gaining its properties and methods.
 
@@ -70,7 +70,7 @@
 - **Definition:**  
   The ability of different objects to respond uniquely to the same method call.
 - **Benefit:**  
-  Increases flexibility and integration in code.
+  Makes code more flexible and easier to extend.
 - **Real-Life Example:**  
   The “draw()” method can be used for many shapes (circle, triangle, square), but each draws itself differently.
 
@@ -113,7 +113,7 @@
 
 ## Practice Exercise
 
-1. Think of an everyday object (e.g. book, smartphone, bicycle).
+1. Think of an everyday object (e.g., a book, smartphone or bicycle).
 2. Identify possible attributes (what describes it?) and methods (what can it do?).
 3. Try to write a simple class definition in your preferred programming language.
 

@@ -1,4 +1,4 @@
-# Ticketing System — Front End
+# Ticketing System: Front End
 
 React front end for the OOP ticketing system coursework (December 2024). It is a UI prototype:
 the pages work, but they are not yet connected to the back end, so sign-up, login and the event

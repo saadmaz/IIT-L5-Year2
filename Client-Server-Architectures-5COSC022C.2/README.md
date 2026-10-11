@@ -1,11 +1,10 @@
-# Client–Server Architectures
+# Client-Server Architectures
 
-**Module Code:** 5COSC022C.2
-**Module Title:** Client-Server Architectures
+**Module Code:** 5COSC022C.2\n**Module Title:** Client-Server Architectures
 
 ## 📌 Overview
 
-This repository contains all learning materials, lab work, and coursework related to the **Client–Server Architectures** module. The module focuses on understanding, designing, and implementing client–server systems with a strong emphasis on **RESTful web services**, **backend architecture**, and **HTTP-based communication**.
+This repository contains all learning materials, lab work, and coursework related to the **Client-Server Architectures** module. The module focuses on understanding, designing, and implementing client-server systems with a strong emphasis on **RESTful web services**, **backend architecture**, and **HTTP-based communication**.
 
 The coursework component involves the design and implementation of a **RESTful Bookstore API** using **Java (JAX-RS)** and **JSON**, following strict technology constraints.
 
@@ -15,7 +14,7 @@ The coursework component involves the design and implementation of a **RESTful B
 
 By completing this module, you will be able to:
 
-* Understand client–server architectural principles
+* Understand client-server architectural principles
 * Design RESTful APIs using HTTP methods and resource-based URLs
 * Implement backend services using Java and JAX-RS
 * Handle server-side validation, error handling, and HTTP status codes
@@ -27,13 +26,13 @@ By completing this module, you will be able to:
 
 ## 🧠 Module Content Structure
 
-### 📚 Weekly Content (Weeks 1–10)
+### 📚 Weekly Content (Weeks 1-10)
 
 Each week includes **lectures (LECs)** and **tutorials (TUTs)** covering both theory and practical concepts.
 
 Typical topics include:
 
-* Introduction to Client–Server Architectures
+* Introduction to Client-Server Architectures
 * HTTP, REST principles, and stateless communication
 * RESTful API design
 * JAX-RS fundamentals
@@ -43,7 +42,7 @@ Typical topics include:
 * API testing strategies
 * Scalability and architectural considerations
 
-> 📁 All weekly materials are organised by week folders (Week 01 → Week 10).
+> 📁 All weekly materials are organised into weekly folders (Week 01 to Week 10).
 
 ---
 
@@ -52,7 +51,7 @@ Typical topics include:
 The lab sessions focus on hands-on development, including:
 
 * Creating REST endpoints using JAX-RS
-* Handling GET, POST, PUT, DELETE requests
+* Handling GET, POST, PUT and DELETE requests
 * Implementing validation logic
 * Managing in-memory data using Java collections
 * Testing endpoints using Postman
@@ -127,8 +126,7 @@ The coursework submission consists of **three required deliverables**:
    * API testing using **Postman**
    * Clear explanation of functionality
 
-📊 **Weighting:** 60% of the final module grade
-📅 **Submission Deadline:** 28 April 2025
+📊 **Weighting:** 60% of the final module grade\n📅 **Submission Deadline:** 28 April 2025
 
 ---
 
@@ -146,7 +144,7 @@ After coursework submission, this backend API can be extended for **personal lea
 
 ## 🧪 Running the Project
 
-1. Import the project into an IDE (IntelliJ / Eclipse)
+1. Import the project into an IDE (IntelliJ IDEA or Eclipse)
 2. Deploy on **Apache Tomcat 9**
 3. Use **Postman** to test API endpoints
 4. Ensure the server is running before sending requests
@@ -163,6 +161,4 @@ After coursework submission, this backend API can be extended for **personal lea
 
 ## 👤 Author
 
-**Saad Mazhar**
-Computer Science Undergraduate
-University of Westminster (IIT Sri Lanka)
+**Saad Mazhar**\nComputer Science Undergraduate\nUniversity of Westminster (IIT Sri Lanka)

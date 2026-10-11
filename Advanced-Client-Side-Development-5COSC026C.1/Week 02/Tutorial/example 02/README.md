@@ -1,6 +1,6 @@
 # Advanced Client-Side Development
 
-## Week 02 –Tutorial 02 - Exercise 2
+## Week 02 Tutorial 02: Exercise 2
 
 ### CSS Loader Animation & Content Reveal
 
@@ -29,10 +29,10 @@ By completing this exercise, the student will understand:
 
 ## 🛠️ Technologies Used
 
-* **HTML5** – Page structure
-* **CSS3** – Styling and animations
-* **CSS Keyframes** – Animation control
-* **Transforms & Opacity** – Visual transitions
+* **HTML5**: Page structure
+* **CSS3**: Styling and animations
+* **CSS Keyframes**: Animation control
+* **Transforms & Opacity**: Visual transitions
 
 ---
 
@@ -109,9 +109,9 @@ The delay ensures the content appears **only after the loader finishes**, creati
 
 | Time    | What Happens                       |
 | ------- | ---------------------------------- |
-| 0s – 2s | Loader spins in the center         |
+| 0s to 2s | Loader spins in the center        |
 | 2s      | Loader fades out completely        |
-| 2s – 4s | Content fades in and slides upward |
+| 2s to 4s | Content fades in and slides upward |
 
 ---
 
@@ -152,5 +152,4 @@ No server or additional setup is required.
 
 ## 👤 Author
 
-**Saad Mazhar**
-Advanced Client-Side Development – Week 02 Tutorial Exercise
+**Saad Mazhar**\nAdvanced Client-Side Development: Week 02 Tutorial Exercise

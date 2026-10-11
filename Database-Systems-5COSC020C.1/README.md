@@ -7,9 +7,9 @@ It is organized into **three main sections**, covering **database design**, **SQ
 
 ## 📌 Module Coverage Overview
 
-* **Weeks 1–5**: Database Design (Conceptual & Logical Modeling)
-* **Weeks 6–8**: SQL and Relational Querying
-* **Weeks 10–12**: XML, XPath, XSLT, and XQuery
+* **Weeks 1-5**: Database Design (Conceptual & Logical Modeling)
+* **Weeks 6-8**: SQL and Relational Querying
+* **Weeks 10-12**: XML, XPath, XSLT, and XQuery
 
 Each section builds on the previous one, moving from theory and modeling to implementation and advanced data querying.
 
@@ -19,24 +19,24 @@ Each section builds on the previous one, moving from theory and modeling to impl
 
 > *Note: The following tools are not part of the official module resources and are used only as supplementary aids for practice and validation.*
 
-* **XML Formatter** – XML structure formatting
+* **XML Formatter**: XML structure formatting
   [https://www.freeformatter.com/xml-formatter.html](https://www.freeformatter.com/xml-formatter.html)
 
-* **XSD Validator** – XML schema validation
+* **XSD Validator**: XML schema validation
   [https://www.liquid-technologies.com/online-xsd-validator](https://www.liquid-technologies.com/online-xsd-validator)
 
-* **XPath Utility** – XPath expression testing
+* **XPath Utility**: XPath expression testing
   [https://www.easycodeforall.com/XPathUtility.jsp](https://www.easycodeforall.com/XPathUtility.jsp)
 
-* **XSLT Transformer** – XML to HTML/text transformation
+* **XSLT Transformer**: XML to HTML/text transformation
   [https://www.freeformatter.com/xsl-transformer.html](https://www.freeformatter.com/xsl-transformer.html)
 
-* **XQuery & XPath Engine** – Query execution and testing
+* **XQuery & XPath Engine**: Query execution and testing
   [https://www.videlibri.de/cgi-bin/xidelcgi](https://www.videlibri.de/cgi-bin/xidelcgi)
 
 ---
 
-## 📐 Section 01 – Database Design (Weeks 1–5)
+## 📐 Section 01: Database Design (Weeks 1-5)
 
 This section focuses on the **conceptual and logical modeling** of database systems.
 
@@ -78,7 +78,7 @@ This section focuses on the **conceptual and logical modeling** of database syst
 
 ---
 
-## 🧮 Section 02 – SQL (Weeks 6–8)
+## 🧮 Section 02: SQL (Weeks 6-8)
 
 This section focuses on **implementing and querying relational databases** using SQL.
 
@@ -97,8 +97,8 @@ This section focuses on **implementing and querying relational databases** using
 
 * **Join Operations**
 
-  * **INNER JOIN** – combining related tables
-  * **SELF JOIN** – querying hierarchical relationships (e.g., managers)
+  * **INNER JOIN**: combining related tables
+  * **SELF JOIN**: querying hierarchical relationships (e.g., managers)
   * **OUTER JOIN**
 
     * `LEFT OUTER JOIN`
@@ -122,7 +122,7 @@ This section focuses on **implementing and querying relational databases** using
 
 ---
 
-## 🧾 Section 03 – XML (Weeks 10–12)
+## 🧾 Section 03: XML (Weeks 10-12)
 
 This section explores **XML-based data representation, navigation, transformation, and querying**.
 

@@ -24,8 +24,8 @@ At the time of building this project, my focus was on *learning by doing*, not o
 
 ## 🛠️ Tech Stack
 
-* **HTML5** – Page structure and content
-* **CSS3** – Styling and layout
+* **HTML5**: Page structure and content
+* **CSS3**: Styling and layout
 * **No frameworks** (no Bootstrap, no Tailwind)
 * **No JavaScript**
 * **Static deployment**
@@ -96,9 +96,9 @@ My current work includes:
 
 * Modern UI/UX principles
 * Responsive design
-* JavaScript & frameworks
-* Full‑stack applications
-* Production‑grade projects
+* JavaScript and frameworks
+* Full-stack applications
+* Production-grade projects
 
 ---
 
@@ -118,6 +118,6 @@ Every developer starts somewhere.
 
 This portfolio is my *somewhere*.
 
-If you’re a beginner reading this — build, deploy, and keep going. Progress compounds.
+If you’re a beginner reading this: build, deploy, and keep going. Progress compounds.
 
-— **Saad Mazhar**
+**Saad Mazhar**

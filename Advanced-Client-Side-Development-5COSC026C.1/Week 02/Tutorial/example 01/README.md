@@ -1,6 +1,6 @@
 # Advanced Client-Side Development
 
-## Week 02 - Tutorial – Exercise One
+## Week 02 Tutorial: Exercise One
 
 ## 📌 Overview
 
@@ -25,12 +25,12 @@ The purpose of this tutorial exercise is to:
 
 ## 🛠️ Technologies Used
 
-* **HTML5** – Page structure and semantic layout
-* **CSS3** – Styling, animations, and responsiveness
-* **Normalize.css** – Cross-browser consistency
-* **Google Fonts (Raleway)** – Typography
-* **Font Awesome** – Icons
-* **Media Queries** – Responsive design
+* **HTML5**: Page structure and semantic layout
+* **CSS3**: Styling, animations, and responsiveness
+* **Normalize.css**: Cross-browser consistency
+* **Google Fonts (Raleway)**: Typography
+* **Font Awesome**: Icons
+* **Media Queries**: Responsive design
 
 ---
 
@@ -105,7 +105,7 @@ The purpose of this tutorial exercise is to:
 
 The layout adapts to smaller screens using **CSS media queries**:
 
-* Navigation collapses into stacked layout
+* Navigation collapses into a stacked layout
 * Grid layouts convert to single-column views
 * Icons replace text where appropriate
 * Footer switches to vertical alignment
@@ -155,5 +155,4 @@ A detailed walkthrough of this exercise is available in the following video:
 
 ## 👤 Author
 
-**Saad Mazhar**
-Advanced Client-Side Development – Tutorial Exercise
+**Saad Mazhar**\nAdvanced Client-Side Development: Tutorial Exercise

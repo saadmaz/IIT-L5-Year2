@@ -1,4 +1,4 @@
-# Property Search App – CW2 (Saad Mazhar)
+# Property Search App: CW2 (Saad Mazhar)
 
 Advanced Client-Side Development (5COSC026C) coursework: a single-page estate-agent app for searching and saving properties.
 

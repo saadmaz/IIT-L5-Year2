@@ -47,9 +47,7 @@ class PainHistoryScreenState extends State<PainHistoryScreen> {
       selectedFilter = filter;
       _filteredPainHistory = widget.painHistory.where((entry) {
         try {
-          return DateFormat('yyyy-MM-dd – kk:mm')
-              .parse(entry['date'])
-              .isAfter(cutoffDate);
+          return _parseEntryDate(entry['date']).isAfter(cutoffDate);
         } catch (e) {
           return false;
         }
@@ -57,10 +55,17 @@ class PainHistoryScreenState extends State<PainHistoryScreen> {
     });
   }
 
+  /// Parse a stored entry date. Older entries used an en dash separator,
+  /// so normalise it before parsing.
+  DateTime _parseEntryDate(String dateString) {
+    return DateFormat('yyyy-MM-dd - kk:mm')
+        .parse(dateString.replaceAll(String.fromCharCode(0x2013), '-'));
+  }
+
   /// ✅ Format Date as "Fri 21 Mar"
   String _formatDate(String dateString) {
     try {
-      DateTime dateTime = DateFormat('yyyy-MM-dd – kk:mm').parse(dateString);
+      DateTime dateTime = _parseEntryDate(dateString);
       return DateFormat('E d MMM').format(dateTime); // Fri 21 Mar
     } catch (e) {
       return "Invalid Date";
@@ -70,7 +75,7 @@ class PainHistoryScreenState extends State<PainHistoryScreen> {
   /// ✅ Format Time as "02:46 AM"
   String _formatTime(String dateString) {
     try {
-      DateTime dateTime = DateFormat('yyyy-MM-dd – kk:mm').parse(dateString);
+      DateTime dateTime = _parseEntryDate(dateString);
       return DateFormat('hh:mm a').format(dateTime); // 02:46 AM
     } catch (e) {
       return "--:--";

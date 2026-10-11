@@ -1,5 +1,5 @@
 <?php
-// basketview.php — Displays basket contents
+// basketview.php: Displays basket contents
 session_start();
 include('headfile.html');
 
