@@ -109,6 +109,7 @@ All work is my own unless stated otherwise and should not be copied for academic
 
 If you have any questions or feedback, or would like to discuss any of the material, feel free to get in touch:
 
+- **Website:** [saadmaz.com](https://www.saadmaz.com)
 - **GitHub:** [github.com/saadmaz](https://github.com/saadmaz)
 - **Email:** saadmazaa@gmail.com
 - **LinkedIn:** [linkedin.com/in/saadmaz](https://www.linkedin.com/in/saadmaz)
