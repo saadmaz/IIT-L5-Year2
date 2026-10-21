@@ -1,0 +1,157 @@
+
+[
+  {
+    "id": 1,
+    "type": "House",
+    "bedrooms": 3,
+    "price": 450000,
+    "location": "Richmond, London BR1 2AB",
+    "description": "Beautiful Victorian terrace house with period features, spacious rooms, and a lovely garden. Recently renovated kitchen and bathroom.",
+    "added": "2024-06-15",
+    "picture": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=600&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1505843513577-22bb7d21e455?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=800&h=600&fit=crop"
+    ],
+    "url": "/property/1",
+    "tenure": "Freehold",
+    "postcode": "BR1"
+  },
+  {
+    "id": 2,
+    "type": "Flat",
+    "bedrooms": 2,
+    "price": 320000,
+    "location": "Camden, London NW1 8QG",
+    "description": "Modern 2-bedroom apartment in the heart of Camden. Open plan living, fitted kitchen, and excellent transport links.",
+    "added": "2024-06-20",
+    "picture": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=600&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1505843513577-22bb7d21e455?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=600&fit=crop"
+    ],
+    "url": "/property/2",
+    "tenure": "Leasehold",
+    "postcode": "NW1"
+  },
+  {
+    "id": 3,
+    "type": "House",
+    "bedrooms": 4,
+    "price": 680000,
+    "location": "Dulwich, London SE21 7BQ",
+    "description": "Stunning 4-bedroom Edwardian family home with original features, large kitchen-diner, and beautiful rear garden. Perfect for families.",
+    "added": "2024-06-10",
+    "picture": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1505843513577-22bb7d21e455?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=800&h=600&fit=crop"
+    ],
+    "url": "/property/3",
+    "tenure": "Freehold",
+    "postcode": "SE21"
+  },
+  {
+    "id": 4,
+    "type": "Flat",
+    "bedrooms": 1,
+    "price": 280000,
+    "location": "Shoreditch, London E1 6AN",
+    "description": "Contemporary 1-bedroom apartment in trendy Shoreditch. High-spec finish, concierge service, and rooftop terrace access.",
+    "added": "2024-06-25",
+    "picture": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1505843513577-22bb7d21e455?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=800&h=600&fit=crop"
+    ],
+    "url": "/property/4",
+    "tenure": "Leasehold",
+    "postcode": "E1"
+  },
+  {
+    "id": 5,
+    "type": "House",
+    "bedrooms": 5,
+    "price": 850000,
+    "location": "Clapham, London SW4 9DA",
+    "description": "Exceptional 5-bedroom family home with period charm and modern amenities. Large garden, off-street parking, and excellent schools nearby.",
+    "added": "2024-06-05",
+    "picture": "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=800&h=600&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1505843513577-22bb7d21e455?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=800&h=600&fit=crop"
+    ],
+    "url": "/property/5",
+    "tenure": "Freehold",
+    "postcode": "SW4"
+  },
+  {
+    "id": 6,
+    "type": "Flat",
+    "bedrooms": 3,
+    "price": 520000,
+    "location": "Canary Wharf, London E14 5AB",
+    "description": "Luxury 3-bedroom apartment with stunning Thames views. Modern development with gym, concierge, and excellent transport links.",
+    "added": "2024-06-12",
+    "picture": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1505843513577-22bb7d21e455?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=800&h=600&fit=crop"
+    ],
+    "url": "/property/6",
+    "tenure": "Leasehold",
+    "postcode": "E14"
+  },
+  {
+    "id": 7,
+    "type": "House",
+    "bedrooms": 2,
+    "price": 380000,
+    "location": "Greenwich, London SE10 8EW",
+    "description": "Charming 2-bedroom Victorian cottage in historic Greenwich. Original features, private garden, and close to Greenwich Park.",
+    "added": "2024-06-18",
+    "picture": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&h=600&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1505843513577-22bb7d21e455?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=800&h=600&fit=crop"
+    ],
+    "url": "/property/7",
+    "tenure": "Freehold",
+    "postcode": "SE10"
+  }
+]
