@@ -11,7 +11,7 @@ import '../widgets/exercise_card_widget.dart';
 
 /// HomeScreen is the main dashboard of the app
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
   // Mock data for demonstration purposes
   late List<PostureAnalysisResult> _recentAnalyses;
   late List<Exercise> _recommendedExercises;
-  double _weeklyProgress = 0.78; // 78% progress
+  final double _weeklyProgress = 0.78; // 78% progress
 
   @override
   void initState() {

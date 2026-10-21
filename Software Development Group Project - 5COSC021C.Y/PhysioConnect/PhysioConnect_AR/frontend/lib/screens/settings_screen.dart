@@ -9,7 +9,7 @@ import '../models/user_model.dart';
 
 /// SettingsScreen allows users to configure app preferences
 class SettingsScreen extends StatefulWidget {
-  const SettingsScreen({Key? key}) : super(key: key);
+  const SettingsScreen({super.key});
 
   @override
   State<SettingsScreen> createState() => _SettingsScreenState();
@@ -114,7 +114,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         // In a real app, you would update the specific notification type
                       },
                     );
-                  }).toList(),
+                  }),
                 ],
               ],
             ),

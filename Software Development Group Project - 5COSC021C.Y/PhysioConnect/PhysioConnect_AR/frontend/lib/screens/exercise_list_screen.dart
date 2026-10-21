@@ -10,7 +10,7 @@ import '../widgets/exercise_card_widget.dart';
 
 /// ExerciseListScreen displays a filterable list of exercises
 class ExerciseListScreen extends StatefulWidget {
-  const ExerciseListScreen({Key? key}) : super(key: key);
+  const ExerciseListScreen({super.key});
 
   @override
   State<ExerciseListScreen> createState() => _ExerciseListScreenState();

@@ -1,0 +1,156 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+  color: #E3F3F3;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.844);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #0e7b3e;
+}
+
+/* Hero Section */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../src/assets/physioconnect_home.png");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3rem;
+  color: #ffffff;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #B0B0B0;
+}
+
+/* Features Section */
+.features {
+  padding: 100px 20px;
+  background-image: url('../assets/features-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* About Us */
+.about {
+  padding: 100px 20px;
+  background-image: url('../assets/about-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* How It Works */
+.how-it-works {
+  padding: 100px 20px;
+  background-image: url('../assets/how-it-works-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Contact Section */
+.contact {
+  padding: 100px 20px;
+  background-image: url('../assets/contact-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0d4c34;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.back-to-top:hover {
+  opacity: 0.8;
+}
+
+/* Responsive Styles */
+/* Prevents Horizontal Scroll */
+html, body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Ensure Full Width Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* General Typography Scaling */
+@media (max-width: 768px) {
+  h1 {
+      font-size: 2rem;
+  }
+
+  h2 {
+      font-size: 1.6rem;
+  }
+
+  p {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) { /* iPhone 14 Pro & Small Devices */
+  h1 {
+      font-size: 1.8rem;
+  }
+
+  h2 {
+      font-size: 1.4rem;
+  }
+
+  p {
+      font-size: 0.95rem;
+  }
+
+  .container {
+      padding: 0.8rem;
+  }
+
+}

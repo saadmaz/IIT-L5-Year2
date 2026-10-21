@@ -17,13 +17,13 @@ class PostureFeedbackWidget extends StatelessWidget {
   final bool enableSound;
 
   const PostureFeedbackWidget({
-    Key? key,
+    super.key,
     required this.issues,
     required this.overallScore,
     required this.onExerciseSelected,
     this.enableHaptic = true,
     this.enableSound = true,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -155,7 +155,7 @@ class PostureFeedbackWidget extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 8),
-        ...issues.map(_buildIssueItem).toList(),
+        ...issues.map(_buildIssueItem),
       ],
     );
   }

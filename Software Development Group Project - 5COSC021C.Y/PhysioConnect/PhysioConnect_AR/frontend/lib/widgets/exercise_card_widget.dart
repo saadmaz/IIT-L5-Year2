@@ -14,11 +14,11 @@ class ExerciseCardWidget extends StatelessWidget {
   final bool showDetails;
   
   const ExerciseCardWidget({
-    Key? key,
+    super.key,
     required this.exercise,
     this.onTap,
     this.showDetails = true,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
