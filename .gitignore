@@ -32,3 +32,6 @@ node_modules/
 # OS files
 Thumbs.db
 .DS_Store
+
+# Large media (too big for GitHub; kept locally / on Drive)
+Client-Server-Architectures-5COSC022C.2/Coursework/*.mp4
